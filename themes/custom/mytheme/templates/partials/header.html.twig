@@ -1,0 +1,54 @@
+{% set theme_path = theme_path ?? (base_path ~ 'themes/custom/mytheme') %}
+
+<header>
+  <nav class="flex items-center justify-between !px-4 sm:!px-8 lg:!px-12 !py-2">
+    <div>
+      <img src="{{ theme_path }}/assets/static/Header_Logo.svg" alt="head_logo" class="h-16 sm:h-20">
+    </div>
+
+    <div class="hidden md:!flex items-center text-base gap-4 text-[#424557]">
+      <a href="#" class="hover:text-[#C4A574]">About</a>
+      <a href="#" class="hover:text-[#C4A574]">Businesses</a>
+      <a href="#" class="hover:text-[#C4A574]">Media</a>
+      <a href="#" class="hover:text-[#C4A574]">Philantrophy</a>
+      <a href="/timeline" class="hover:text-[#C4A574]">Timeline</a>
+      <a href="#" class="hover:text-[#C4A574]">Contact</a>
+      <img src="{{ theme_path }}/assets/static/Search_Icon.svg" alt="search" class="h-5">
+    </div>
+
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-btn" class="focus:outline-none z-50 relative" aria-label="Open Menu">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-overlay" class="hidden fixed inset-0 bg-opacity-50 z-40 md:hidden transition-opacity"></div>
+
+  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center !p-4 border-b border-gray-200">
+        <img src="{{ theme_path }}/assets/static/Header_Logo.svg" alt="sidebar_logo" class="h-14">
+        <button id="close-menu-btn" class="focus:outline-none" aria-label="Close Menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-6 !px-6 !py-4 text-base text-[#424557] overflow-y-auto flex-1">
+        <a href="#" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">About</a>
+        <a href="#" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">Businesses</a>
+        <a href="#" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">Media</a>
+        <a href="#" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">Philantrophy</a>
+        <a href="/timeline" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">Timeline</a>
+        <a href="#" class="hover:text-[#C4A574] border-b border-gray-200 pb-3">Contact</a>
+        <div class="pt-4">
+          <img src="{{ theme_path }}/assets/static/Search_Icon.svg" alt="search" class="h-5">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

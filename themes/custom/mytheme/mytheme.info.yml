@@ -1,0 +1,14 @@
+name: My Theme
+type: theme
+description: "Custom Drupal theme with Vite, Tailwind, and Three.js"
+package: Custom
+core_version_requirement: ^10 || ^11
+base theme: false
+
+libraries:
+  - mytheme/global    # Load site-wide CSS/JS
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

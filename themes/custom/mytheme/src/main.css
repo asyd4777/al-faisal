@@ -1,0 +1,448 @@
+@import "tailwindcss";
+
+/* FSSienaTrial Font Family - Clean Setup */
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-ExtraLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FSSienaTrial';
+  src: url('./fonts/FSSienaTrial-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --text-base: 1.2rem;
+  --text-lg: 1.4rem;
+  --text-2xl: 1.8rem;
+}
+
+body {
+  background-color: #F7F0E9;
+  font-family: 'FSSienaTrial', sans-serif;
+  font-weight: 200;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+
+#footer_logo {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+#warning {
+  color: #756750;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slide.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide-image {
+  opacity: 0;
+}
+
+.slide.active .slide-image {
+  animation: fadeInImage 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* Circle Container - Centers both circles properly */
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* pointer-events: none; */
+}
+
+.inner-circle {
+    position: absolute;
+    width: clamp(200px, 25vw, 400px); /* Responsive sizing */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.outer-circle {
+    position: absolute;
+    width: clamp(400px, 50vw, 800px); /* Responsive sizing, larger than inner */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.year-display {
+    /* transform: translate(-50%, -50%); */
+    font-size: 10rem;
+    color: #84ACDE;
+    text-align: center;
+    letter-spacing: -0.05em;
+    z-index: 100;
+}
+
+.info_text {
+    font-size: 18px;
+    background-color: #EAEAEA;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    color: #B7B7B7;
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+    opacity: 0.9;
+    line-height: 25px;
+}
+
+.timeline-bar {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-tick {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background: #84ACDE;
+    border-radius: 2px;
+    transition: all left 0.2s ease-in-out;
+}
+
+.timeline-tick.active {
+    left: 10px;
+}
+
+.tick-year {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    color: gray;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Keep all your existing media queries... */
+
+
+
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-tick {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background: #84ACDE;
+  border-radius: 2px;
+  transition: all left 0.2s ease-in-out;
+}
+
+.timeline-tick.active {
+  left: 10px;
+}
+
+.tick-year {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  color: gray;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Tablet styles (768px - 1024px) */
+@media (max-width: 1024px) {
+    .inner-circle {
+        width: clamp(180px, 22vw, 350px);
+    }
+
+    .outer-circle {
+        width: clamp(350px, 45vw, 700px);
+    }
+
+    .year-display {
+        font-size: 7rem;
+        top: 30%;
+    }
+
+    .year-display::before {
+        width: 20rem;
+        height: 20rem;
+        border: 25px solid white;
+    }
+
+    .info_text {
+        font-size: 15px;
+        max-width: 550px;
+        line-height: 22px;
+        top: 42%;
+    }
+
+    .timeline-bar {
+        left: 6%;
+        /* display: none; */
+    }
+
+    .tick-year {
+        font-size: 14px;
+        margin-right: 14px;
+    }
+}
+
+/* Mobile landscape (max-width: 768px) */
+@media (max-width: 768px) {
+    .inner-circle {
+        width: clamp(150px, 28vw, 250px);
+    }
+
+    .outer-circle {
+        width: clamp(280px, 50vw, 500px);
+    }
+
+    .year-display {
+        font-size: 5rem;
+        top: 28%;
+    }
+
+    .year-display::before {
+        width: 15rem;
+        height: 15rem;
+        border: 20px solid white;
+    }
+
+    .info_text {
+        font-size: 14px;
+        max-width: 85%;
+        line-height: 20px;
+        top: 35%;
+        padding: 12px 15px;
+    }
+
+    .timeline-bar {
+        left: 2%;
+        height: 35%;
+        display: none;
+    }
+
+    .timeline-tick {
+        width: 20px;
+    }
+
+    .tick-year {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+}
+
+/* Mobile portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    .inner-circle {
+        width: clamp(120px, 30vw, 200px);
+    }
+
+    .outer-circle {
+        width: clamp(240px, 55vw, 400px);
+    }
+
+    .year-display {
+        font-size: 3.5rem;
+        top: 25%;
+    }
+
+    .year-display::before {
+        width: 11rem;
+        height: 11rem;
+        border: 15px solid white;
+    }
+
+    .info_text {
+        font-size: 12px;
+        max-width: 90%;
+        line-height: 18px;
+        top: 38%;
+        padding: 10px 12px;
+    }
+
+
+    .timeline-bar {
+        left: 2%;
+        height: 30%;
+    }
+
+    .timeline-tick {
+        width: 15px;
+    }
+
+    .timeline-tick.active {
+        left: 5px;
+    }
+
+    .tick-year {
+        font-size: 10px;
+        margin-right: 6px;
+    }
+}
+
+/* Extra small devices (max-width: 375px) */
+@media (max-width: 375px) {
+    .inner-circle {
+        width: clamp(100px, 32vw, 180px);
+    }
+
+    .outer-circle {
+        width: clamp(200px, 60vw, 360px);
+    }
+
+    .year-display {
+        font-size: 3rem;
+    }
+
+    .year-display::before {
+        width: 10rem;
+        height: 10rem;
+        border: 12px solid white;
+    }
+
+    .info_text {
+        font-size: 11px;
+        line-height: 16px;
+        padding: 8px 10px;
+    }
+
+    .timeline-bar {
+        height: 28%;
+    }
+}

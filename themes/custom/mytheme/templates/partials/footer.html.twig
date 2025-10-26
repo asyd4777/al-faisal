@@ -1,0 +1,166 @@
+{% set theme_path = theme_path ?? (base_path ~ 'themes/custom/mytheme') %}
+
+<footer
+      class="bg-[#031F46] text-[#acacac] relative min-h-[400px] lg:min-h-[500px]"
+    >
+      <!-- Decorative Elements -->
+
+      <img
+        src="{{ theme_path }}/assets/static/To_top.svg"
+        alt="to_top"
+        class="bg-transparent absolute top-8 right-8 lg:top-17 lg:right-10 h-[40px] cursor-pointer hover:opacity-80 transition-opacity z-10"
+      />
+
+      <div
+        class="container mx-auto !px-6 sm:!px-8 lg:!px-12 !pt-16 lg:!pt-20 !pb-8"
+      >
+        <!-- Top section with logo and menu -->
+        <div
+          class="flex flex-col xl:flex-row items-start justify-between gap-12 lg:gap-20 !mb-12 lg:!mb-20"
+        >
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img
+              src="{{ theme_path }}/assets/static/Footer_logo.svg"
+              alt="Al Faisal Holding"
+              class="h-20 lg:h-28"
+            />
+          </div>
+
+          <!-- Main Navigation with Business Categories -->
+          <!-- Main Navigation with Business Categories -->
+          <nav
+            class="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-16 text-sm lg:text-base uppercase tracking-wider flex-1 justify-center"
+          >
+            <div class="flex flex-col gap-3">
+              <a href="#" class="hover:text-[#C4A574] font-medium">ABOUT</a>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <a href="#" class="hover:text-[#C4A574] font-medium mb-2"
+                >BUSINESSES</a
+              >
+              <!-- Business Categories under BUSINESSES -->
+              <div
+                class="flex flex-col gap-2 text-xs lg:text-sm text-[#8B9DB5] tracking-normal font-light uppercase"
+              >
+                <a href="#" class="hover:text-white">Real Estate</a>
+                <a href="#" class="hover:text-white">Hospitality</a>
+                <a href="#" class="hover:text-white"
+                  >Construction & Project Management</a
+                >
+                <a href="#" class="hover:text-white"
+                  >Culture, Education, Leisure, Sport</a
+                >
+                <a href="#" class="hover:text-white">Services</a>
+                <a href="#" class="hover:text-white">Trading & Distribution</a>
+                <a href="#" class="hover:text-white">Financial Investments</a>
+                <a href="#" class="hover:text-white">Manufacturing</a>
+                <a href="#" class="hover:text-white">Aamal Company Q.P.S.C</a>
+              </div>
+            </div>
+
+            <!-- Just nudged slightly left -->
+            <div
+              class="flex flex-col gap-3 !mr-12  sm:-translate-x-3"
+            >
+              <a href="#" class="hover:text-[#C4A574] font-medium">MEDIA</a>
+            </div>
+
+            <div
+              class="flex flex-col gap-3  sm:-translate-x-3"
+            >
+              <a href="#" class="hover:text-[#C4A574] font-medium"
+                >PHILANTHROPY</a
+              >
+            </div>
+
+            <div
+              class="flex flex-col gap-3  sm:-translate-x-3"
+            >
+              <a href="#" class="hover:text-[#C4A574] font-medium">CONTACT</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Bottom bar with copyright and social links -->
+      <div class="relative bg-black/30 border-t border-white/10 !mt-10 z-10">
+        <img
+          src="{{ theme_path }}/assets/static/Footer_Aseet.svg"
+          alt=""
+          class="hidden xl:!block absolute right-8 bottom-13 h-20 sm:h-28 md:h-32 lg:h-36 xl:h-40 bg-transparent z-1 pointer-events-none"
+        />
+        <div class="w-full mx-auto !px-6 sm:!px-8 lg:!px-12 !py-4 lg:!py-5">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 lg:gap-8 text-xs text-[#DFD3C7]/70"
+          >
+            <!-- Left side - Copyright and links -->
+            <div
+              class="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-6 items-start sm:items-center flex-wrap"
+            >
+              <span class="whitespace-nowrap">© 2025 Al Faisal Holding.</span>
+              <div class="flex flex-wrap gap-2 sm:gap-3 items-center">
+                <a href="#" class="hover:text-white whitespace-nowrap"
+                  >Privacy Policy</a
+                >
+                <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+                <a href="#" class="hover:text-white whitespace-nowrap"
+                  >Terms of Use</a
+                >
+                <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+                <a href="#" class="hover:text-white whitespace-nowrap"
+                  >Disclaimer</a
+                >
+                <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+                <a href="#" class="hover:text-white whitespace-nowrap"
+                  >Accessibility</a
+                >
+              </div>
+            </div>
+
+            <!-- Right side - Social links -->
+            <div class="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 items-center">
+              <a href="#" class="hover:text-white whitespace-nowrap"
+                >LinkedIn</a
+              >
+              <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+              <a href="#" class="hover:text-white whitespace-nowrap">X</a>
+              <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+              <a href="#" class="hover:text-white whitespace-nowrap">YouTube</a>
+              <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+              <a href="#" class="hover:text-white whitespace-nowrap"
+                >Instagram</a
+              >
+              <span class="hidden sm:!inline text-[#DFD3C7]/40">|</span>
+              <a href="#" class="hover:text-white whitespace-nowrap"
+                >Facebook</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warning text -->
+      <div class="bg-[#031F46] !px-6 sm:!px-8 lg:!px-12 !py-4 lg:!py-5">
+        <p
+          class="text-[#756750] text-xs leading-relaxed max-w-10xl mx-auto text-center"
+        >
+          Warning: It has come to the attention of Al Faisal Holding that
+          unauthorized persons are contacting members of the public or business
+          community by various means including telecommunications, emails and
+          through social and professional networking sites claiming to be
+          representing Al Faisal Holding or its shareholders or associated
+          entities. These unauthorized persons may be attempting to commit
+          fraudulent acts and deceive the public and no dealings should take
+          place with any such persons and any business or other relationship
+          with Al Faisal Holding will only be conducted through official
+          channels by persons authorised under constitutional documentation of
+          the Company. Al Faisal Holding will never attempt to solicit business
+          on a cold-call basis in such a manner. Al Faisal Holding will not be
+          liable for any fraudulent activities carried out in the aforementioned
+          manner.
+          <strong class="text-[#8B7355]">Fraudulent acts disclaimer</strong>
+        </p>
+      </div>
+    </footer>

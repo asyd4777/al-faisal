@@ -1,0 +1,111 @@
+{
+  "_index.js": {
+    "file": "index.js",
+    "name": "index"
+  },
+  "src/fonts/FSSienaTrial-Bold.otf": {
+    "file": "FSSienaTrial-Bold.otf",
+    "src": "src/fonts/FSSienaTrial-Bold.otf"
+  },
+  "src/fonts/FSSienaTrial-BoldItalic.otf": {
+    "file": "FSSienaTrial-BoldItalic.otf",
+    "src": "src/fonts/FSSienaTrial-BoldItalic.otf"
+  },
+  "src/fonts/FSSienaTrial-ExtraLight.otf": {
+    "file": "FSSienaTrial-ExtraLight.otf",
+    "src": "src/fonts/FSSienaTrial-ExtraLight.otf"
+  },
+  "src/fonts/FSSienaTrial-ExtraLightItalic.otf": {
+    "file": "FSSienaTrial-ExtraLightItalic.otf",
+    "src": "src/fonts/FSSienaTrial-ExtraLightItalic.otf"
+  },
+  "src/fonts/FSSienaTrial-Light.otf": {
+    "file": "FSSienaTrial-Light.otf",
+    "src": "src/fonts/FSSienaTrial-Light.otf"
+  },
+  "src/fonts/FSSienaTrial-LightItalic.otf": {
+    "file": "FSSienaTrial-LightItalic.otf",
+    "src": "src/fonts/FSSienaTrial-LightItalic.otf"
+  },
+  "src/fonts/FSSienaTrial-Medium.otf": {
+    "file": "FSSienaTrial-Medium.otf",
+    "src": "src/fonts/FSSienaTrial-Medium.otf"
+  },
+  "src/fonts/FSSienaTrial-Regular.otf": {
+    "file": "FSSienaTrial-Regular.otf",
+    "src": "src/fonts/FSSienaTrial-Regular.otf"
+  },
+  "src/fonts/FSSienaTrial-Thin.otf": {
+    "file": "FSSienaTrial-Thin.otf",
+    "src": "src/fonts/FSSienaTrial-Thin.otf"
+  },
+  "src/fonts/FSSienaTrial-ThinItalic.otf": {
+    "file": "FSSienaTrial-ThinItalic.otf",
+    "src": "src/fonts/FSSienaTrial-ThinItalic.otf"
+  },
+  "src/images/Business_Vericals_Slide1.jpg": {
+    "file": "Business_Vericals_Slide1.jpg",
+    "src": "src/images/Business_Vericals_Slide1.jpg"
+  },
+  "src/images/timeline/i1.png": {
+    "file": "i1.png",
+    "src": "src/images/timeline/i1.png"
+  },
+  "src/images/timeline/i2.png": {
+    "file": "i2.png",
+    "src": "src/images/timeline/i2.png"
+  },
+  "src/images/timeline/i3.png": {
+    "file": "i3.png",
+    "src": "src/images/timeline/i3.png"
+  },
+  "src/images/timeline/i4.png": {
+    "file": "i4.png",
+    "src": "src/images/timeline/i4.png"
+  },
+  "src/images/timeline/i5.png": {
+    "file": "i5.png",
+    "src": "src/images/timeline/i5.png"
+  },
+  "src/images/timeline/i7.png": {
+    "file": "i7.png",
+    "src": "src/images/timeline/i7.png"
+  },
+  "src/main.css": {
+    "file": "styles.css",
+    "src": "src/main.css",
+    "isEntry": true,
+    "names": [
+      "styles.css"
+    ]
+  },
+  "src/main.js": {
+    "file": "main.js",
+    "name": "main",
+    "src": "src/main.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "assets": [
+      "Business_Vericals_Slide1.jpg"
+    ]
+  },
+  "src/timeline.js": {
+    "file": "timeline.js",
+    "name": "timeline",
+    "src": "src/timeline.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "assets": [
+      "i7.png",
+      "i5.png",
+      "i2.png",
+      "i1.png",
+      "i3.png",
+      "i4.png"
+    ]
+  }
+}

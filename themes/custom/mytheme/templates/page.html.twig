@@ -1,0 +1,21 @@
+{# web/themes/custom/mytheme/templates/page.html.twig #}
+
+{# Load your global Vite bundle(s) for every page #}
+{{ attach_library('mytheme/global') }}
+
+{% set theme_path = base_path ~ 'themes/custom/mytheme' %}
+
+{# Global header on all pages #}
+{% include '@mytheme/partials/header.html.twig' %}
+
+
+<main role="main" id="main-content">
+  {{ page.highlighted }}
+  {{ page.help }}
+
+  {# Main page content (nodes, views, blocks, etc.) #}
+  {{ page.content }}
+</main>
+
+{# Global footer on all pages #}
+{% include '@mytheme/partials/footer.html.twig' with { theme_path: theme_path } %}

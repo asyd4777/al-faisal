@@ -1,0 +1,11 @@
+global:
+  css:
+    theme:
+      assets/build/styles.css: {}  # vite's CSS bundle name from rollup input key "styles"
+  js:
+    assets/build/main.js: { attributes: { type: module, defer: true } }
+
+timeline:
+  js:
+    assets/build/timeline.js:        # emitted by Vite
+      attributes: { type: module, defer: true }

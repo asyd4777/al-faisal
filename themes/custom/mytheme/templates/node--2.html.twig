@@ -1,0 +1,68 @@
+{# web/themes/custom/mytheme/templates/node--2.html.twig #}
+{# --- TIMELINE CONTENT START --- #}
+{{ attach_library('mytheme/timeline') }}
+	{% if theme_path is not defined %}
+{% set theme_path = url('<front>')|render ~ 'themes/custom/mytheme' %}
+{% endif %}
+	<section class="relative w-full h-screen"> <img src="{{ theme_path }}/assets/static/timeline/Layer 12.png" alt="" class="w-full h-full object-cover"/>
+</section>
+
+<section>
+	<div class="w-full flex justify-center !px-4 sm:!px-6 lg:!px-8 !py-10 sm:!py-14 lg:!py-20 text-[#606060] !mb-12 sm:!mb-16 lg:!mb-20">
+		<p class="font-thin text-center max-w-6xl text-2xl sm:text-3xl md:text-4xl leading-relaxed sm:leading-relaxed md:leading-normal">
+			Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			          magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+			          viverra maecenas accumsan lacus vel facilisis.
+		</p>
+	</div>
+</section>
+
+<!-- Timeline Section (Canvas + UI Overlay) -->
+<section
+	class="relative timeline-section">
+	<!-- Sticky container wrapper -->
+	<div
+		class="relative h-[500vh]">
+		<!-- Sticky wrapper for both canvas and UI -->
+		<div
+			class="sticky top-0 left-0 w-full h-screen">
+			<!-- Canvas container (background layer) -->
+			<div id="canvas-container" class="absolute top-0 left-0 w-full h-screen z-1"></div>
+
+			<!-- UI Overlay (foreground layer) -->
+			<div class="ui-overlay absolute top-0 left-0 w-full h-screen z-10 pointer-events-none">
+				<div class="relative font-thin flex flex-col items-center justify-center h-screen">
+					<p class="year-display !mt-12" id="yearDisplay">1965</p>
+					<p class="info_text -translate-y-6" id="infoText">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						                Quisquam rerum dolor repudiandae at, illum similique
+						                perspiciatis dolores dolorem debitis, veritatis illo nulla.
+						                Assumenda, error voluptatem cumque eligendi nesciunt eius odit?
+					</p>
+				</div>
+
+				<!-- Decorative circles - properly centered and responsive -->
+				<div class="circle-container">
+					<img src="{{ theme_path }}/assets/static/timeline/INNER CIRCLE.svg" alt="" class="inner-circle"/>
+					<img src="{{ theme_path }}/assets/static/timeline/OUTET CIRCLE.svg" alt="" class="outer-circle"/>
+				</div>
+
+				<img src="{{ theme_path }}/assets/static/timeline/Animataion_top_logo.svg" alt="" class="absolute -top-10 right-5 h-30 md:right-8 lg:right-12"/>
+
+				<div class="timeline-bar" id="timelineBar"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section
+	class="!mt-60">
+	<!-- Bottom text -->
+	<div class="w-full flex justify-center !px-4 sm:!px-6 lg:!px-8 !py-10 sm:!py-14 lg:!py-20 text-[#606060] bg-[#E1E1E1] relative z-20">
+		<p class="text-center max-w-6xl text-2xl sm:text-3xl md:text-4xl leading-relaxed sm:leading-relaxed md:leading-normal">
+			Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+			          maecenas accumsan lacus vel facilisis.
+		</p>
+	</div>
+</section>
+{# --- TIMELINE CONTENT END --- #}
