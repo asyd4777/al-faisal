@@ -34,9 +34,9 @@
 		</h2>
 		<p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-[#5B5B5B]">
 			Al Faisal Holding is one of Qatar’s leading private companies that
-			          played a significant role in the development of the Qatar economy and
-			          infrastructure, attracting many foreign investments and creating
-			          immense career opportunities.
+									          played a significant role in the development of the Qatar economy and
+									          infrastructure, attracting many foreign investments and creating
+									          immense career opportunities.
 		</p>
 		<button class="text-[#285F99] !mt-4 !px-4 !py-2 border border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-lg text-left w-fit">
 			Explore Faisal Holding
@@ -49,7 +49,7 @@
 			<h2 class="text-2xl sm:text-2xl">Our Establishment</h2>
 			<p class="text-base sm:text-lg">
 				Qatar’s economy and infrastructure attract many foreign investments
-				            and create immense career opportunities.
+												            and create immense career opportunities.
 			</p>
 		</div>
 
@@ -98,7 +98,7 @@
 	<div class="flex flex-col gap-3 sm:gap-4 max-w-full sm:max-w-lg xl:max-w-sm relative z-[10] !px-2 sm:!px-0 items-center xl:items-start">
 		<p class="leading-7 sm:leading-9 lg:leading-12 text-lg sm:text-2xl lg:text-3xl text-[#518DCC] font-normal text-center xl:text-left">
 			"Today we pride ourselves on being a trustworthy household name both
-			          in Qatar & beyond."
+									          in Qatar & beyond."
 		</p>
 		<p class="text-base sm:text-lg lg:text-xl font-medium text-[#518DCC] text-center xl:text-left">
 			Sheikh Faisal Bin Qassim Al Thani - Chairman
@@ -117,8 +117,8 @@
 			</h2>
 			<p class="text-base sm:text-lg max-w-xl leading-7 sm:leading-9 lg:leading-12 text-[#5B5B5B]">
 				Al Faisal Holding has a meticulously crafted investment strategy
-				            based on thorough market research, ensuring the identification of
-				            robust and growth-oriented sectors and geographies.
+												            based on thorough market research, ensuring the identification of
+												            robust and growth-oriented sectors and geographies.
 			</p>
 		</div>
 
@@ -154,191 +154,220 @@
 		<img src="{{ theme_path }}/assets/static/Layer 24.png" alt="footprint" class="h-60 sm:h-80 lg:h-100 w-auto max-w-full object-contain"/>
 	</div>
 </section>
+<!-- Horizontal Accordion Section -->
 <section
-	class="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden rounded-3xl !px-4 sm:!px-8 !py-4 sm:!py-8 !mb-16">
-	<!-- Background Image -->
-	<img
-	id="bg-image" src="{{ theme_path }}/assets/static/Business_Vericals_Slide1.jpg" alt="Al Jazi Background" class="absolute inset-0 !p-3 z-0 object-cover w-full h-full rounded-3xl overflow-clip"/>
-
+	class="relative w-full overflow-hidden rounded-3xl !px-4 sm:!px-8 !py-4 sm:!py-8 !mb-16">
 	<!-- AF Element (hidden on smaller screens) -->
 	<img
-	src="{{ theme_path }}/assets/static/AF_Element2.svg" alt="" class="hidden lg:!block absolute -top-15 -left-15 h-150 z-10"/>
+	src="{{ theme_path }}/assets/static/AF_Element2.svg" alt="" class="hidden lg:!block absolute -top-15 -left-15 h-150 z-10 pointer-events-none"/>
 
-	<!-- Vertical List Container (Right Side - Inactive) - Desktop Only -->
+	<!-- Horizontal Accordion Container - Desktop (lg and up) -->
 	<div
-		id="vertical-list-container" class="absolute right-8 sm:right-12 lg:right-20 hidden bottom-7 z-20 lg:!flex flex-row gap-0 h-[98.5%]"><!-- Inactive verticals will be inserted here by JS -->
+		id="accordion-container" class="hidden lg:!flex w-full h-[800px] rounded-3xl overflow-hidden"><!-- Accordion panels will be dynamically inserted here -->
 	</div>
 
-	<!-- Active Vertical Box (Left Side) - Desktop Only -->
-	<div id="active-vertical-box" class="absolute bottom-0 left-20 z-20 lg:!flex hidden gap-2 flex-col items-center justify-end h-[98.5%] !p-4 transition-all duration-500">
-		<p id="active-vertical-text" class="text-white text-xl tracking-widest !mb-4" style="
-				            writing-mode: vertical-rl;
-				            text-orientation: mixed;
-				            transform: rotate(180deg);
-				          ">
-			REAL ESTATE
-		</p>
-		<div id="active-indicator" class="w-4 h-4 transition-colors duration-500 !mb-4"></div>
-	</div>
-	<div class="absolute left-40 bottom-3 h-[97%] !p-6 bg-white opacity-10 lg:!flex hidden"></div>
-
-	<!-- Main Content - Desktop -->
-	<div class="absolute lg:-bottom-50 lg:left-40 z-20 hidden lg:!flex items-center h-full !px-4 sm:!px-10 lg:!px-20">
-		<div class="max-w-full sm:max-w-md lg:max-w-lg text-white !space-y-4 sm:!space-y-6">
-			<h1 id="main-heading" class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-light underline tracking-wide underline-offset-12 transition-all duration-500">
-				Al Jazi Real Estate
-			</h1>
-			<p id="main-description" class="text-[#b1b1b1] text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 max-w-full sm:max-w-lg lg:max-w-4xl">
-				Established in 1995, Al Jazi Real Estate is a subsidiary of Al
-				            Faisal Holding and a leading real estate developer in Qatar. Known
-				            for its high-end residential and commercial properties.
-			</p>
-			<button class="text-white !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-[#9D8055] transition-all duration-300 rounded text-xl text-left">
-				Explore
-			</button>
-		</div>
-	</div>
-
-	<!-- Mobile Layout - Stacked Vertically -->
+	<!-- Vertical Accordion Container - Mobile & Tablet -->
 	<div
-		id="mobile-layout" class="lg:hidden absolute inset-0 z-20 flex flex-col !p-4 overflow-y-auto">
-		<!-- Active Item Indicator (Top) -->
-		<div id="mobile-active-box" class="flex items-center gap-3 !mb-4 !p-3 rounded-lg" style="background-color: rgba(255, 255, 255, 0.2)">
-			<div id="mobile-active-indicator" class="w-4 h-4 flex-shrink-0"></div>
-			<p id="mobile-active-text" class="text-white text-sm font-medium tracking-wide">
-				REAL ESTATE
-			</p>
-		</div>
-
-		<!-- Main Content (Middle) -->
-		<div class="flex-1 flex flex-col justify-center text-white !space-y-3 !mb-4 !p-4">
-			<h1 id="mobile-main-heading" class="text-lg font-light underline tracking-wide underline-offset-8 transition-all duration-500">
-				Al Jazi Real Estate
-			</h1>
-			<p id="mobile-main-description" class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-[#b1b1b1] font-light">
-				Established in 1995, Al Jazi Real Estate is a subsidiary of Al
-				            Faisal Holding and a leading real estate developer in Qatar. Known
-				            for its high-end residential and commercial properties.
-			</p>
-			<button class="text-white !mt-2 !px-3 w-[140px] !py-1.5 border border-[#9D8055] font-medium hover:bg-[#9D8055] transition-all duration-300 rounded text-sm text-left">
-				Explore
-			</button>
-		</div>
-
-		<!-- List Items (Bottom) -->
-		<div
-			id="mobile-list-container" class="flex flex-col w-full"><!-- Inactive verticals will be inserted here by JS -->
-		</div>
+		id="mobile-accordion-container" class="lg:hidden flex flex-col w-full rounded-3xl overflow-hidden"><!-- Mobile accordion panels will be dynamically inserted here -->
 	</div>
 </section>
+<!-- Latest News Slider Section -->
 <section
-	class="relative flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 !px-4 sm:!px-6 lg:!px-28 xl:!px-36 !py-8 lg:!py-12 !mb-24 overflow-hidden">
-	<!-- Rounded colored background covering 70% from the left on large screens, full width on small screens -->
-	<div class="absolute left-0 top-0 h-full w-full lg:w-[70%] bg-[#D8E1E7] lg:rounded-r-3xl z-0"></div>
+  class="relative flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 !px-4 sm:!px-6 lg:!px-28 xl:!px-36 !py-8 lg:!py-12 !mb-24 overflow-hidden"
+>
+  <!-- Rounded colored background covering 70% from the left on large screens, full width on small screens -->
+  <div
+    class="absolute left-0 top-0 h-full w-full lg:w-[70%] bg-[#D8E1E7] lg:rounded-r-3xl z-0"
+  ></div>
 
-	<!-- Vertical Dots Navigation -->
-	<div class="hidden absolute left-10 lg:left-8 top-1/2 transform -translate-y-1/2 z-20 lg:!flex flex-col gap-3">
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300" data-slide="0"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="1"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="2"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="3"></button>
-	</div>
+  <!-- Vertical Dots Navigation -->
+  <div
+    class="hidden absolute left-10 lg:left-8 top-1/2 transform -translate-y-1/2 z-20 lg:!flex flex-col gap-3"
+  >
+    <button
+      class="slider-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300"
+      data-slide="0"
+    ></button>
+    <button
+      class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300"
+      data-slide="1"
+    ></button>
+    <button
+      class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300"
+      data-slide="2"
+    ></button>
+    <button
+      class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300"
+      data-slide="3"
+    ></button>
+  </div>
 
-	<!-- Slider Container -->
-	<div
-		class="slider-container relative w-full h-full">
-		<!-- Slide 1 -->
-		<div class="slide active flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
-			<div class="flex-1 w-full lg:w-auto relative z-10 text-white lg:!pr-16">
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]">
-					Latest News
-				</h2>
-				<p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 !mb-6 lg:!mb-0 text-[#5B5B5B]">
-					Al Faisal Holding, is one of Qatar's leading private companies
-					              that played a significant role in the development of the Qatar
-					              economy and infrastructure attracting many foreign investments and
-					              creating immense career opportunities.
-				</p>
-				<button class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left">
-					Read more
-				</button>
-			</div>
+  <!-- Slider Container -->
+  <div class="slider-container relative w-full h-full">
+    <!-- Slide 1 -->
+    <div
+      class="slide active flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500"
+    >
+      <div
+        class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12"
+      >
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]"
+        >
+          Latest News
+        </h2>
+        <p
+          class="text-base sm:text-xl lg:text-2xl leading-relaxed !mb-6 lg:!mb-0 text-[#5B5B5B]"
+        >
+          Al Faisal Holding, is one of Qatar's leading private companies
+          that played a significant role in the development of the Qatar
+          economy and infrastructure attracting many foreign investments and
+          creating immense career opportunities.
+        </p>
+        <button
+          class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left"
+        >
+          Read more
+        </button>
+      </div>
 
-			<div class="flex-1 w-full lg:w-auto lg:flex-none lg:basis-[500px] relative z-10">
-				<div class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:h-104 mx-auto">
-					<img src="{{ theme_path }}/assets/static/latest_news_1.jpg" alt="Luxury hotel building at night with fountain" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
-				</div>
-			</div>
-		</div>
+      <div
+        class="w-full lg:w-[45%] xl:w-[50%] relative z-10"
+      >
+        <div
+          class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto"
+        >
+          <img
+            src="{{ theme_path }}/assets/static/latest_news_1.jpg"
+            alt="Luxury hotel building at night with fountain"
+            class="slide-image w-full h-full object-cover transition-opacity duration-700"
+          />
+        </div>
+      </div>
+    </div>
 
-		<!-- Slide 2 -->
-		<div class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
-			<div class="flex-1 w-full lg:w-auto relative z-10 text-white lg:!pr-16">
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]">
-					Industry Leadership
-				</h2>
-				<p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 !mb-6 lg:!mb-0 text-[#5B5B5B]">
-					Leading the way in sustainable development and innovation across
-					              multiple sectors. Our commitment to excellence drives us to create
-					              lasting value for our stakeholders and communities.
-				</p>
-				<button class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left">
-					Read more
-				</button>
-			</div>
+    <!-- Slide 2 -->
+    <div
+      class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500"
+    >
+      <div
+        class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12"
+      >
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]"
+        >
+          Industry Leadership
+        </h2>
+        <p
+          class="text-base sm:text-lg lg:text-2xl leading-relaxed !mb-6 lg:!mb-0 text-[#5B5B5B]"
+        >
+          Leading the way in sustainable development and innovation across
+          multiple sectors. Our commitment to excellence drives us to create
+          lasting value for our stakeholders and communities.
+        </p>
+        <button
+          class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left"
+        >
+          Read more
+        </button>
+      </div>
 
-			<div class="flex-1 w-full lg:w-auto lg:flex-none lg:basis-[500px] relative z-10">
-				<div class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:h-104 mx-auto">
-					<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Modern office building" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
-				</div>
-			</div>
-		</div>
+      <div
+        class="w-full lg:w-[45%] xl:w-[50%] relative z-10"
+      >
+        <div
+          class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+            alt="Modern office building"
+            class="slide-image w-full h-full object-cover transition-opacity duration-700"
+          />
+        </div>
+      </div>
+    </div>
 
-		<!-- Slide 3 -->
-		<div class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
-			<div class="flex-1 w-full lg:w-auto relative z-10 text-white lg:!pr-16">
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]">
-					Global Expansion
-				</h2>
-				<p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 !mb-6 lg:!mb-0 text-[#5B5B5B]">
-					Expanding our footprint across international markets with
-					              strategic partnerships and innovative solutions. Building bridges
-					              between continents and creating opportunities worldwide.
-				</p>
-				<button class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left">
-					Read more
-				</button>
-			</div>
+    <!-- Slide 3 -->
+    <div
+      class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500"
+    >
+      <div
+        class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12"
+      >
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]"
+        >
+          Global Expansion
+        </h2>
+        <p
+          class="text-base sm:text-lg lg:text-2xl leading-relaxed !mb-6 lg:!mb-0 text-[#5B5B5B]"
+        >
+          Expanding our footprint across international markets with
+          strategic partnerships and innovative solutions. Building bridges
+          between continents and creating opportunities worldwide.
+        </p>
+        <button
+          class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left"
+        >
+          Read more
+        </button>
+      </div>
 
-			<div class="flex-1 w-full lg:w-auto lg:flex-none lg:basis-[500px] relative z-10">
-				<div class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:h-104 mx-auto">
-					<img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800" alt="City skyline" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
-				</div>
-			</div>
-		</div>
+      <div
+        class="w-full lg:w-[45%] xl:w-[50%] relative z-10"
+      >
+        <div
+          class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800"
+            alt="City skyline"
+            class="slide-image w-full h-full object-cover transition-opacity duration-700"
+          />
+        </div>
+      </div>
+    </div>
 
-		<!-- Slide 4 -->
-		<div class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
-			<div class="flex-1 w-full lg:w-auto relative z-10 text-white lg:!pr-16">
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]">
-					Sustainable Future
-				</h2>
-				<p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 !mb-6 lg:!mb-0 text-[#5B5B5B]">
-					Committed to building a sustainable future through environmentally
-					              responsible practices and green initiatives. Investing in
-					              tomorrow's technology today for a better world.
-				</p>
-				<button class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left">
-					Read more
-				</button>
-			</div>
+    <!-- Slide 4 -->
+    <div
+      class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500"
+    >
+      <div
+        class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12"
+      >
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-normal !mb-4 lg:!mb-6 text-[#285F99]"
+        >
+          Sustainable Future
+        </h2>
+        <p
+          class="text-base sm:text-lg lg:text-2xl leading-relaxed !mb-6 lg:!mb-0 text-[#5B5B5B]"
+        >
+          Committed to building a sustainable future through environmentally
+          responsible practices and green initiatives. Investing in
+          tomorrow's technology today for a better world.
+        </p>
+        <button
+          class="text-[#285F99] !mt-4 !px-4 w-[200px] !py-2 border-1 border-[#9D8055] font-medium hover:bg-blue-100 transition-all duration-300 rounded text-xl text-left"
+        >
+          Read more
+        </button>
+      </div>
 
-			<div class="flex-1 w-full lg:w-auto lg:flex-none lg:basis-[500px] relative z-10">
-				<div class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:h-104 mx-auto">
-					<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Modern workspace" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
-				</div>
-			</div>
-		</div>
-	</div>
+      <div
+        class="w-full lg:w-[45%] xl:w-[50%] relative z-10"
+      >
+        <div
+          class="rounded-2xl shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
+            alt="Modern workspace"
+            class="slide-image w-full h-full object-cover transition-opacity duration-700"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {# --- HOMEPAGE CONTENT END --- #}

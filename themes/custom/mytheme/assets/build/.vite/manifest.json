@@ -1,8 +1,4 @@
 {
-  "_index.js": {
-    "file": "index.js",
-    "name": "index"
-  },
   "src/fonts/FSSienaTrial-Bold.otf": {
     "file": "FSSienaTrial-Bold.otf",
     "src": "src/fonts/FSSienaTrial-Bold.otf"
@@ -47,6 +43,10 @@
     "file": "Business_Vericals_Slide1.jpg",
     "src": "src/images/Business_Vericals_Slide1.jpg"
   },
+  "src/images/timeline/bg.jpg": {
+    "file": "bg.jpg",
+    "src": "src/images/timeline/bg.jpg"
+  },
   "src/images/timeline/i1.png": {
     "file": "i1.png",
     "src": "src/images/timeline/i1.png"
@@ -84,9 +84,6 @@
     "name": "main",
     "src": "src/main.js",
     "isEntry": true,
-    "imports": [
-      "_index.js"
-    ],
     "assets": [
       "Business_Vericals_Slide1.jpg"
     ]
@@ -96,9 +93,6 @@
     "name": "timeline",
     "src": "src/timeline.js",
     "isEntry": true,
-    "imports": [
-      "_index.js"
-    ],
     "assets": [
       "i7.png",
       "i5.png",
