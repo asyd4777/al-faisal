@@ -1,3 +1,33 @@
+import AOS from 'aos';
+
+(function (Drupal) {
+  Drupal.behaviors.aosInit = {
+    attach(context) {
+      if (!window.__aosInitialized) {
+        AOS.init({
+          duration: 700,
+          offset: 120,
+          once: true,
+          easing: 'ease-out',
+        });
+        window.__aosInitialized = true;
+      } else {
+        AOS.refresh();
+      }
+    }
+  };
+})(Drupal);
+
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 700,
+    offset: 120,
+    once: true,
+    easing: 'ease-out',
+  });
+});
+
+
 //sidebar
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const closeMenuBtn = document.getElementById("close-menu-btn");
