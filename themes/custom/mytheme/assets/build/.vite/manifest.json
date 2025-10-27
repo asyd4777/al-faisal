@@ -43,6 +43,10 @@
     "file": "Business_Vericals_Slide1.jpg",
     "src": "src/images/Business_Vericals_Slide1.jpg"
   },
+  "src/images/arrow_icon.svg": {
+    "file": "arrow_icon.svg",
+    "src": "src/images/arrow_icon.svg"
+  },
   "src/images/timeline/bg.jpg": {
     "file": "bg.jpg",
     "src": "src/images/timeline/bg.jpg"
@@ -85,7 +89,8 @@
     "src": "src/main.js",
     "isEntry": true,
     "assets": [
-      "Business_Vericals_Slide1.jpg"
+      "Business_Vericals_Slide1.jpg",
+      "arrow_icon.svg"
     ]
   },
   "src/timeline.js": {

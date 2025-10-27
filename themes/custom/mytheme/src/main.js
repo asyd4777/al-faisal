@@ -115,6 +115,8 @@ setInterval(() => {
 // ============================================
 
 import slide1Url from './images/Business_Vericals_Slide1.jpg';
+import btnarrow from './images/arrow_icon.svg';
+
 const businessVerticals = [
   {
     id: 1,
@@ -261,10 +263,14 @@ function createDesktopAccordion() {
           </div>
           <div class="text-white space-y-6 max-w-2xl flex flex-col gap-6 !mb-20 !ml-20">
             <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
-            <p class="text-2xl text-gray-300 leading-relaxed">${vertical.content}</p>
-            <button class="text-white !px-6 !py-2 border border-[#9D8055] font-medium hover:bg-[#9D8055] transition-all duration-300 rounded text-lg w-[200px] text-left">
-              Explore
-            </button>
+            <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${vertical.content}</p>
+            <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
+			          flex items-center gap-2 focus-visible:outline-none
+			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
+			<span>Explore</span>
+		</a>
           </div>
         </div>
       `;
@@ -324,11 +330,15 @@ function setActivePanel(newIndex) {
                   style="text-decoration-color: ${businessVerticals[index].underlineColor}">
                   ${businessVerticals[index].heading}
               </h2>
-              <p class="text-2xl text-gray-300 leading-relaxed">${businessVerticals[index].content}</p>
-              <button class="text-white !px-6 !py-2 border border-[#9D8055] font-medium hover:bg-[#9D8055] 
-                             transition-all duration-300 rounded text-lg w-[200px] text-left">
-                Explore
-              </button>
+              <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${businessVerticals[index].content}</p>
+                <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
+			          flex items-center gap-2 focus-visible:outline-none
+			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
+			<span>Explore</span>
+		</a>
+              
             </div>
           </div>
         `;
@@ -395,10 +405,14 @@ function createMobileAccordion() {
           </div>
           <div class="flex flex-col gap-3">
             <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
-            <p class="text-lg text-gray-300 leading-relaxed">${vertical.content}</p>
-            <button class="text-white mt-3 !px-4 !py-1.5 border border-[#9D8055] font-medium hover:bg-[#9D8055] transition-all duration-300 rounded text-sm text-left w-[150px]">
-              Explore
-            </button>
+            <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${vertical.content}</p>
+             <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
+			          flex items-center gap-2 focus-visible:outline-none
+			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
+			<span>Explore</span>
+		</a>
           </div>
         </div>
       `;
@@ -452,10 +466,14 @@ function setActiveMobilePanel(newIndex) {
             </div>
             <div class="flex flex-col gap-3">
               <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
-              <p class="text-sm text-gray-300 leading-relaxed">${businessVerticals[index].content}</p>
-              <button class="text-white mt-3 !px-4 !py-1.5 border border-[#9D8055] font-medium hover:bg-[#9D8055] transition-all duration-300 rounded text-sm w-[150px] text-left">
-                Explore
-              </button>
+              <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${businessVerticals[index].content}</p>
+              <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
+			          flex items-center gap-2 focus-visible:outline-none
+			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
+			<span>Explore</span>
+		</a>
             </div>
           </div>
         `;
