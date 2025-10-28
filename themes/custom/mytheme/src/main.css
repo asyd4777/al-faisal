@@ -84,15 +84,15 @@ html {
 }
 
 :root {
-  --text-base: 1.2rem;
-  --text-lg: 1.4rem;
-  --text-2xl: 1.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.2rem;
+  --text-2xl: 1.6rem;
 }
 
 body {
   background-color: #F7F0E9;
   font-family: 'FSSienaTrial', sans-serif;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 ul,

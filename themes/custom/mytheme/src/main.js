@@ -127,7 +127,17 @@ setInterval(() => {
 // HORIZONTAL ACCORDION - Business Verticals
 // ============================================
 
-import slide1Url from './images/Business_Vericals_Slide1.jpg';
+import slide1Url from './images/A_Slide_RealEstate.jpg';
+import slide2Url from './images/A_Slide_Hospitality.jpg';
+import slide3Url from './images/A_Slide_Constractution.jpg';
+import slide4Url from './images/A_Slide_Culture.jpg';
+import slide5Url from './images/A_Slide_Services.jpg';
+import slide6Url from './images/A_Slide_Trading.jpg';
+import slide7Url from './images/A_Slide_Financial.jpg';
+import slide8Url from './images/A_Slide_Aamal.jpg';
+import slide9Url from './images/A_Slide_Insdutrial.jpg';
+
+
 import btnarrow from './images/arrow_icon.svg';
 
 const businessVerticals = [
@@ -149,8 +159,7 @@ const businessVerticals = [
     underlineColor: "#3498DB",
     content:
       "Al Jazi Hospitality offers world-class hotel and leisure experiences, managing premium resorts and catering services designed to deliver comfort and excellence.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+    image: slide2Url,
   },
   {
     id: 3,
@@ -160,8 +169,7 @@ const businessVerticals = [
     underlineColor: "#E67E22",
     content:
       "Specializing in construction and infrastructure projects, delivering innovative solutions in residential, commercial, and industrial sectors.",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    image: slide3Url,
   },
   {
     id: 4,
@@ -171,8 +179,7 @@ const businessVerticals = [
     underlineColor: "#9B59B6",
     content:
       "Promoting cultural exchange and education through investments in institutions, sports facilities, and creative community projects.",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop",
+    image: slide4Url,
   },
   {
     id: 5,
@@ -182,8 +189,7 @@ const businessVerticals = [
     underlineColor: "#1ABC9C",
     content:
       "Providing diverse services including facilities management, maintenance, and technical support for both residential and commercial clients.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+    image: slide5Url,
   },
   {
     id: 6,
@@ -193,8 +199,7 @@ const businessVerticals = [
     underlineColor: "#F1C40F",
     content:
       "A trusted leader in distribution, offering a wide range of consumer and industrial products backed by strong logistics and reliable partnerships.",
-    image:
-      "https://images.unsplash.com/photo-1593642634443-44adaa06623a?q=80&w=1200&auto=format&fit=crop",
+    image: slide6Url,
   },
   {
     id: 7,
@@ -204,8 +209,7 @@ const businessVerticals = [
     underlineColor: "#E74C3C",
     content:
       "Focused on strategic financial investments that foster growth and sustainability across diverse economic sectors.",
-    image:
-      "https://images.unsplash.com/photo-1522205408450-add114ad53fe?q=80&w=1200&auto=format&fit=crop",
+    image: slide7Url,
   },
   {
     id: 8,
@@ -215,8 +219,7 @@ const businessVerticals = [
     underlineColor: "#F39C12",
     content:
       "A pioneer in industrial production, supporting Qatar's self-sufficiency through innovation and quality manufacturing facilities.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+    image: slide8Url,
   },
   {
     id: 9,
@@ -226,8 +229,7 @@ const businessVerticals = [
     underlineColor: "#5DADE2",
     content:
       "The parent holding company driving diversification and excellence across all business verticals under Al Faisal Holding.",
-    image:
-      "https://images.unsplash.com/photo-1521790361543-f645cf042ec4?q=80&w=1200&auto=format&fit=crop",
+    image: slide9Url,
   },
 ];
 let activeAccordionIndex = 0;
@@ -278,14 +280,14 @@ function createDesktopAccordion() {
             <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
     <a
-					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
-										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -349,15 +351,15 @@ function setActivePanel(newIndex) {
                   ${businessVerticals[index].heading}
               </h2>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
-                 <a
-					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+                <a
+					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
-										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -429,15 +431,15 @@ function createMobileAccordion() {
           <div class="flex flex-col gap-3">
             <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
-             <a
-					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+            <a
+					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
-										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -496,14 +498,14 @@ function setActiveMobilePanel(newIndex) {
               <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
                <a
-					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
-										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>

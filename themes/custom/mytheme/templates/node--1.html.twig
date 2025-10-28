@@ -6,7 +6,7 @@
 	<section
 	class="w-[100%] h-[100vh] relative !mb-4 overflow-hidden"> <!-- Background autoplay video -->
 	<video id="hero-video" class="absolute inset-0 w-full h-full object-cover z-0 opacity-0 transition-opacity duration-1000" muted playsinline poster="{{ theme_path }}/assets/static/Header_Video_Cover.jpg">
-		<source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4"/>
+		<source src="{{ theme_path }}/assets/static/Header_Video.mp4" type="video/mp4"/>
 		Your browser does not support the video tag.
 	</video>
 
@@ -16,9 +16,7 @@
 	<!-- Centered overlay text with clickable play button -->
 	<div class="absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-start text-left select-none">
 		<img id="play-button" src="{{ theme_path }}/assets/static/Play_Icon.svg" alt="Play video" class="h-16 sm:h-20 mb-2 sm:mb-4 cursor-pointer transition-transform hover:scale-110"/>
-		<h2 class="text-2xl sm:text-3xl md:text-[35px] text-[#9CC5F0] leading-tight font-thin">
-			60 Years<br/>Empowering<br/>Excellence
-		</h2>
+		
 	</div>
 
 	<!-- Decorative asset -->
@@ -32,21 +30,21 @@
 		<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99]">
 			The Power of Purpose
 		</h2>
-		<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-[#5B5B5B]">
+		<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B]">
 			Al Faisal Holding is one of Qatar’s leading private companies that
 																					          played a significant role in the development of the Qatar economy and
 																					          infrastructure, attracting many foreign investments and creating
 																					          immense career opportunities.
 		</p>
 		<a
-			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 border border-[#9D8055] font-medium
+			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-thin
 								          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
 								          w-fit flex items-center gap-2 focus-visible:outline-none
 								          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
 			<!-- Wrap content so both icon + text move together -->
 			<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-				<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
+				<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
 				<span>Explore Faisal Holding</span>
 			</span>
 		</a>
@@ -100,7 +98,7 @@
 <section class="!px-4 sm:!px-8 lg:!px-12 !py-6 sm:!py-8 lg:!py-6 flex flex-col xl:flex-row items-center justify-around gap-6 sm:gap-8 !mb-16 sm:!mb-24 relative">
 	<img src="{{ theme_path }}/assets/static/AF_ElementNew.svg" alt="" class="h-100 absolute z-0 top-90 left-[30%] xl:!block hidden"/>
 
-	<div data-aos="zoom-in" class="relative z-[10] w-full xl:w-auto flex justify-center">
+	<div data-aos="fade-up" class="relative z-[10] w-full xl:w-auto flex justify-center">
 		<img src="{{ theme_path }}/assets/static/chairman.jpg" alt="Chairman" class="h-56 sm:h-70 lg:h-100 xl:h-120 w-auto max-w-full object-cover rounded-lg"/>
 	</div>
 
@@ -109,18 +107,18 @@
 			"Today we pride ourselves on being a trustworthy household name both
 																					          in Qatar & beyond."
 		</p>
-		<p class="text-base sm:text-lg lg:text-xl font-medium text-[#518DCC] text-center xl:text-left">
+		<p class="text-base sm:text-lg lg:text-xl font-medium text-[#555555] text-center xl:text-left">
 			Sheikh Faisal Bin Qassim Al Thani - Chairman
 		</p>
 		<a
-			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
 								          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
 								          w-fit flex items-center gap-2 focus-visible:outline-none
 								          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
 			<!-- Wrap content so both icon + text move together -->
 			<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-				<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
+				<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
 				<span>Read more</span>
 			</span>
 		</a>
@@ -200,7 +198,6 @@
 		<button class="slider-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300" data-slide="0"></button>
 		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="1"></button>
 		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="2"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="3"></button>
 	</div>
 
 	<!-- Slider Container -->
@@ -219,14 +216,14 @@
 																				          creating immense career opportunities.
 				</p>
 				<a
-					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
 										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-4 w-4 shrink-0"/>
 						<span>Read more</span>
 					</span>
 				</a>
@@ -235,7 +232,7 @@
 
 			<div class="w-full lg:w-[45%] xl:w-[50%] relative z-10">
 				<div class="shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto">
-					<img src="{{ theme_path }}/assets/static/latest_news_1.jpg" alt="Luxury hotel building at night with fountain" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
+					<img src="{{ theme_path }}/assets/static/NEWS1.jpg" alt="Luxury hotel building at night with fountain" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
 				</div>
 			</div>
 		</div>
@@ -252,14 +249,14 @@
 																				          lasting value for our stakeholders and communities.
 				</p>
 				<a
-					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
 										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-4 w-4 shrink-0"/>
 						<span>Read more</span>
 					</span>
 				</a>
@@ -267,7 +264,7 @@
 
 			<div class="w-full lg:w-[45%] xl:w-[50%] relative z-10">
 				<div class="shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto">
-					<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Modern office building" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
+					<img src="{{ theme_path }}/assets/static/NEWS2.jpg" alt="Modern office building" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
 				</div>
 			</div>
 		</div>
@@ -284,14 +281,14 @@
 																				          between continents and creating opportunities worldwide.
 				</p>
 				<a
-					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
 										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-4 w-4 shrink-0"/>
 						<span>Read more</span>
 					</span>
 				</a>
@@ -299,42 +296,12 @@
 
 			<div class="w-full lg:w-[45%] xl:w-[50%] relative z-10">
 				<div class="shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto">
-					<img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800" alt="City skyline" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
+					<img src="{{ theme_path }}/assets/static/NEWS3.jpg" alt="City skyline" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
 				</div>
 			</div>
 		</div>
 
-		<!-- Slide 4 -->
-		<div class="slide flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
-			<div class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12">
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-thin !mb-4 lg:!mb-6 text-[#285F99]">
-					Sustainable Future
-				</h2>
-				<p class="text-base sm:text-lg leading-7 sm:leading-9 !mb-6 lg:!mb-0 text-[#5B5B5B]">
-					Committed to building a sustainable future through environmentally
-																				          responsible practices and green initiatives. Investing in
-																				          tomorrow's technology today for a better world.
-				</p>
-				<a
-					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
-										          w-fit flex items-center gap-2 focus-visible:outline-none
-										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
-
-					<!-- Wrap content so both icon + text move together -->
-					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-6 w-6 shrink-0"/>
-						<span>Read more</span>
-					</span>
-				</a>
-			</div>
-
-			<div class="w-full lg:w-[45%] xl:w-[50%] relative z-10">
-				<div class="shadow-2xl overflow-hidden w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] lg:max-h-[400px] mx-auto">
-					<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Modern workspace" class="slide-image w-full h-full object-cover transition-opacity duration-700"/>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </section>
 {# --- HOMEPAGE CONTENT END --- #}
