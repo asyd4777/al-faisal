@@ -1,29 +1,12 @@
 import AOS from 'aos';
 
-(function (Drupal) {
-  Drupal.behaviors.aosInit = {
-    attach(context) {
-      if (!window.__aosInitialized) {
-        AOS.init({
-          duration: 700,
-          offset: 120,
-          once: true,
-          easing: 'ease-out',
-        });
-        window.__aosInitialized = true;
-      } else {
-        AOS.refresh();
-      }
-    }
-  };
-})(Drupal);
-
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
     duration: 700,
     offset: 120,
-    once: true,
+    once: false,
     easing: 'ease-out',
+    mirror: true
   });
 });
 
@@ -293,14 +276,19 @@ function createDesktopAccordion() {
           </div>
           <div class="text-white space-y-6 max-w-2xl flex flex-col gap-6 !mb-20 !ml-20">
             <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
-            <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${vertical.content}</p>
-            <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
-			          flex items-center gap-2 focus-visible:outline-none
-			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
-			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
-			<span>Explore</span>
-		</a>
+            <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
+    <a
+					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										          w-fit flex items-center gap-2 focus-visible:outline-none
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<span>Explore</span>
+					</span>
+				</a>
           </div>
         </div>
       `;
@@ -360,14 +348,19 @@ function setActivePanel(newIndex) {
                   style="text-decoration-color: ${businessVerticals[index].underlineColor}">
                   ${businessVerticals[index].heading}
               </h2>
-              <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${businessVerticals[index].content}</p>
-                <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
-			          flex items-center gap-2 focus-visible:outline-none
-			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
-			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
-			<span>Explore</span>
-		</a>
+              <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
+                 <a
+					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										          w-fit flex items-center gap-2 focus-visible:outline-none
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<span>Explore</span>
+					</span>
+				</a>
               
             </div>
           </div>
@@ -435,14 +428,19 @@ function createMobileAccordion() {
           </div>
           <div class="flex flex-col gap-3">
             <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
-            <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${vertical.content}</p>
-             <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
-			          flex items-center gap-2 focus-visible:outline-none
-			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
-			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
-			<span>Explore</span>
-		</a>
+            <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
+             <a
+					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										          w-fit flex items-center gap-2 focus-visible:outline-none
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<span>Explore</span>
+					</span>
+				</a>
           </div>
         </div>
       `;
@@ -496,14 +494,19 @@ function setActiveMobilePanel(newIndex) {
             </div>
             <div class="flex flex-col gap-3">
               <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
-              <p class="text-base sm:text-lg leading-7 sm:leading-9 lg:leading-12 text-gray-300">${businessVerticals[index].content}</p>
-              <a href="#" class="text-white !mt-4 !px-4 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
-			          hover:bg-[#9D8055] transition-all duration-300 rounded text-lg
-			          flex items-center gap-2 focus-visible:outline-none
-			          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
-			<img src="${btnarrow}" alt="" class="h-6 w-6 -ml-1"/>
-			<span>Explore</span>
-		</a>
+              <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
+               <a
+					data-aos="fade-up" href="#" class="group text-white !mt-4 !px-5 !py-1.5 sm:!py-2 sm:w-[200px] border border-[#9D8055] font-medium
+										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										          w-fit flex items-center gap-2 focus-visible:outline-none
+										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="${btnarrow}" alt="" class="h-6 w-6 shrink-0"/>
+						<span>Explore</span>
+					</span>
+				</a>
             </div>
           </div>
         `;

@@ -251,7 +251,7 @@ li {
   background-color: rgba(2, 1, 1, 0.45);
   /* make only the background semi-transparent */
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1000;
   color: #B7B7B7;
   max-width: 650px;
@@ -366,6 +366,18 @@ li {
 .timeline-tick.active .tick-year {
   color: #e2e2e2;
   opacity: 1;
+}
+/* show 1965 above the first tick */
+.timeline-bar .timeline-tick:first-child::before {
+  content: '1965';
+  position: absolute;
+  bottom: 100%;          /* above the tick */
+  left: 50%;             /* center over the tick */
+  transform: translateX(-50%);
+  margin-bottom: 8px;    /* space above the tick */
+  font-size: 16px;
+  color: #bbbaba;
+  pointer-events: none;
 }
 
 /* Tablet styles (768px - 1024px) */
