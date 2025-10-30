@@ -167,18 +167,19 @@ setInterval(() => {
 // HORIZONTAL ACCORDION - Business Verticals
 // ============================================
 
-import slide1Url from './images/A_Slide_RealEstate.jpg';
-import slide2Url from './images/A_Slide_Hospitality.jpg';
-import slide3Url from './images/A_Slide_Constractution.jpg';
-import slide4Url from './images/A_Slide_Culture.jpg';
-import slide5Url from './images/A_Slide_Services.jpg';
-import slide6Url from './images/A_Slide_Trading.jpg';
-import slide7Url from './images/A_Slide_Financial.jpg';
-import slide8Url from './images/A_Slide_Aamal.jpg';
-import slide9Url from './images/A_Slide_Insdutrial.jpg';
+import slide1Url from './images/Slide_RealEstate.jpg';
+import slide2Url from './images/Slide_Hospitality.jpg';
+import slide3Url from './images/Slide_Constractution.jpg';
+import slide4Url from './images/Slide_Culture.jpg';
+import slide5Url from './images/Slide_Services.jpg';
+import slide6Url from './images/Slide_Trading.jpg';
+import slide7Url from './images/Slide_Financial.jpg';
+import slide8Url from './images/Slide_AAMAL.jpg';
+import slide9Url from './images/Slide_Insdutrial.jpg';
 
 
 import btnarrow from './images/arrow_icon.svg';
+import btnarrowwhite from './images/arrow_white.svg';
 
 const businessVerticals = [
   {
@@ -315,7 +316,7 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="flex items-end gap-12 !p-8 w-full">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-white text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
           <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
@@ -328,7 +329,7 @@ function createDesktopAccordion() {
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
+						<img src="${btnarrowwhite}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -340,7 +341,7 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="w-full h-full flex items-end justify-center !pb-8">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-white text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
         </div>
@@ -383,7 +384,7 @@ function setActivePanel(newIndex) {
         content.innerHTML = `
           <div class="flex items-end gap-12 !p-8 w-full">
             <div class="flex flex-col items-center gap-4">
-              <p class="text-white text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
+              <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
               <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
             <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
@@ -399,7 +400,7 @@ function setActivePanel(newIndex) {
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
+						<img src="${btnarrowwhite}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -419,7 +420,7 @@ function setActivePanel(newIndex) {
         content.innerHTML = `
           <div class="w-full h-full flex items-end justify-center !pb-8">
             <div class="flex flex-col items-center gap-4">
-              <p class="text-white text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
+              <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
               <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
           </div>
@@ -480,7 +481,7 @@ function createMobileAccordion() {
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
+						<img src="${btnarrowwhite}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>
@@ -545,7 +546,7 @@ function setActiveMobilePanel(newIndex) {
 
 					<!-- Wrap content so both icon + text move together -->
 					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
-						<img src="${btnarrow}" alt="" class="h-5 w-5 shrink-0"/>
+						<img src="${btnarrowwhite}" alt="" class="h-5 w-5 shrink-0"/>
 						<span>Explore</span>
 					</span>
 				</a>

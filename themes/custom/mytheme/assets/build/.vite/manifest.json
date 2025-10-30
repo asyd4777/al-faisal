@@ -39,45 +39,49 @@
     "file": "FSSienaTrial-ThinItalic.otf",
     "src": "src/fonts/FSSienaTrial-ThinItalic.otf"
   },
-  "src/images/A_Slide_AAMAL.jpg": {
-    "file": "A_Slide_AAMAL.jpg",
-    "src": "src/images/A_Slide_AAMAL.jpg"
+  "src/images/Slide_AAMAL.jpg": {
+    "file": "Slide_AAMAL.jpg",
+    "src": "src/images/Slide_AAMAL.jpg"
   },
-  "src/images/A_Slide_Constractution.jpg": {
-    "file": "A_Slide_Constractution.jpg",
-    "src": "src/images/A_Slide_Constractution.jpg"
+  "src/images/Slide_Constractution.jpg": {
+    "file": "Slide_Constractution.jpg",
+    "src": "src/images/Slide_Constractution.jpg"
   },
-  "src/images/A_Slide_Culture.jpg": {
-    "file": "A_Slide_Culture.jpg",
-    "src": "src/images/A_Slide_Culture.jpg"
+  "src/images/Slide_Culture.jpg": {
+    "file": "Slide_Culture.jpg",
+    "src": "src/images/Slide_Culture.jpg"
   },
-  "src/images/A_Slide_Financial.jpg": {
-    "file": "A_Slide_Financial.jpg",
-    "src": "src/images/A_Slide_Financial.jpg"
+  "src/images/Slide_Financial.jpg": {
+    "file": "Slide_Financial.jpg",
+    "src": "src/images/Slide_Financial.jpg"
   },
-  "src/images/A_Slide_Hospitality.jpg": {
-    "file": "A_Slide_Hospitality.jpg",
-    "src": "src/images/A_Slide_Hospitality.jpg"
+  "src/images/Slide_Hospitality.jpg": {
+    "file": "Slide_Hospitality.jpg",
+    "src": "src/images/Slide_Hospitality.jpg"
   },
-  "src/images/A_Slide_Insdutrial.jpg": {
-    "file": "A_Slide_Insdutrial.jpg",
-    "src": "src/images/A_Slide_Insdutrial.jpg"
+  "src/images/Slide_Insdutrial.jpg": {
+    "file": "Slide_Insdutrial.jpg",
+    "src": "src/images/Slide_Insdutrial.jpg"
   },
-  "src/images/A_Slide_RealEstate.jpg": {
-    "file": "A_Slide_RealEstate.jpg",
-    "src": "src/images/A_Slide_RealEstate.jpg"
+  "src/images/Slide_RealEstate.jpg": {
+    "file": "Slide_RealEstate.jpg",
+    "src": "src/images/Slide_RealEstate.jpg"
   },
-  "src/images/A_Slide_Services.jpg": {
-    "file": "A_Slide_Services.jpg",
-    "src": "src/images/A_Slide_Services.jpg"
+  "src/images/Slide_Services.jpg": {
+    "file": "Slide_Services.jpg",
+    "src": "src/images/Slide_Services.jpg"
   },
-  "src/images/A_Slide_Trading.jpg": {
-    "file": "A_Slide_Trading.jpg",
-    "src": "src/images/A_Slide_Trading.jpg"
+  "src/images/Slide_Trading.jpg": {
+    "file": "Slide_Trading.jpg",
+    "src": "src/images/Slide_Trading.jpg"
   },
   "src/images/arrow_icon.svg": {
     "file": "arrow_icon.svg",
     "src": "src/images/arrow_icon.svg"
+  },
+  "src/images/arrow_white.svg": {
+    "file": "arrow_white.svg",
+    "src": "src/images/arrow_white.svg"
   },
   "src/images/timeline/bg.jpg": {
     "file": "bg.jpg",
@@ -121,16 +125,16 @@
     "src": "src/main.js",
     "isEntry": true,
     "assets": [
-      "A_Slide_RealEstate.jpg",
-      "A_Slide_Hospitality.jpg",
-      "A_Slide_Constractution.jpg",
-      "A_Slide_Culture.jpg",
-      "A_Slide_Services.jpg",
-      "A_Slide_Trading.jpg",
-      "A_Slide_Financial.jpg",
-      "A_Slide_AAMAL.jpg",
-      "A_Slide_Insdutrial.jpg",
-      "arrow_icon.svg"
+      "Slide_RealEstate.jpg",
+      "Slide_Hospitality.jpg",
+      "Slide_Constractution.jpg",
+      "Slide_Culture.jpg",
+      "Slide_Services.jpg",
+      "Slide_Trading.jpg",
+      "Slide_Financial.jpg",
+      "Slide_AAMAL.jpg",
+      "Slide_Insdutrial.jpg",
+      "arrow_white.svg"
     ]
   },
   "src/timeline.js": {
