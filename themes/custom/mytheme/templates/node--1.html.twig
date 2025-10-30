@@ -4,7 +4,7 @@
 {% set theme_path = url('<front>')|render ~ 'themes/custom/mytheme' %}
 {% endif %}
 	<section
-	class="w-[100%] h-[100vh] relative !mb-4 overflow-hidden"> <!-- Background autoplay video -->
+	class="w-[100%] h-[80vh] relative !mb-4 overflow-hidden"> <!-- Background autoplay video -->
 	<video id="hero-video" class="absolute inset-0 w-full h-full object-cover z-0 opacity-0 transition-opacity duration-1000" muted playsinline poster="{{ theme_path }}/assets/static/Header_Video_Cover.jpg">
 		<source src="{{ theme_path }}/assets/static/Header_Video.mp4" type="video/mp4"/>
 		Your browser does not support the video tag.
@@ -20,7 +20,7 @@
 	</div>
 
 	<!-- Decorative asset -->
-	<img src="{{ theme_path }}/assets/static/Footer_Aseet.svg" alt="footer asset" class="absolute bottom-0 left-0 h-20 sm:h-28 md:h-32 lg:h-30 xl:h-32 xl:!block hidden z-10"/>
+	<img src="{{ theme_path }}/assets/static/Footer_Aseet.svg" alt="footer asset" class="absolute -bottom-2 left-0 h-20 sm:h-28 md:h-32 lg:h-30 xl:h-32 xl:!block hidden z-10"/>
 </section>
 
 <section
@@ -38,7 +38,7 @@
 		</p>
 		<a
 			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-thin
-								          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+								         transition-colors duration-500 rounded text-lg
 								          w-fit flex items-center gap-2 focus-visible:outline-none
 								          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
@@ -66,12 +66,12 @@
 			<!-- Top 3 boxes -->
 			<div class="flex flex-wrap gap-4">
 				<div data-aos="fade-up" data-aos-duration="1500" class="flex-1 min-w-[100px] !px-4 !py-6 bg-[#F2F1F0] flex flex-col rounded-2xl">
-					<h1 class="text-3xl sm:text-4xl font-thin">60</h1>
+					<h1 class="text-3xl sm:text-4xl font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="2">0</span></h1>
 					<p class="text-xs sm:text-sm mt-2">years of</p>
 					<p class="text-base sm:text-lg">Excellence</p>
 				</div>
 				<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="flex-1 min-w-[100px] !px-4 !py-6 bg-[#F2F1F0] flex flex-col rounded-2xl">
-					<h1 class="text-3xl sm:text-4xl font-thin">4000+</h1>
+					<h1 class="text-3xl sm:text-4xl font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
 					<p class="text-xs sm:text-sm mt-2">of</p>
 					<p class="text-base sm:text-lg">Employees</p>
 				</div>
@@ -79,7 +79,7 @@
 					<h1 class="text-3xl sm:text-4xl relative font-thin">
 						US
 						<span class="absolute text-xs sm:text-sm left-10 font-thin">$</span>
-						5+
+						<span class="countup" data-target="5" data-duration="3000" data-step="1">5</span>+
 					</h1>
 					<p class="text-xs sm:text-sm mt-2">paid up</p>
 					<p class="text-base sm:text-lg">Capital</p>
@@ -88,7 +88,7 @@
 
 			<!-- Bottom box -->
 			<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500" class="flex items-center gap-4 bg-[#F2F1F0] rounded-2xl !px-4 !py-6">
-				<h1 class="text-2xl sm:text-3xl font-thin">100+</h1>
+				<h1 class="text-2xl sm:text-3xl font-thin"><span class="countup" data-target="100" data-duration="5000" data-step="5">0</span>+</h1>
 				<p class="text-base sm:text-lg">International Representatives</p>
 			</div>
 		</div>
@@ -112,7 +112,7 @@
 		</p>
 		<a
 			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
-								          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+								           transition-colors duration-500 rounded text-lg
 								          w-fit flex items-center gap-2 focus-visible:outline-none
 								          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
@@ -125,7 +125,7 @@
 	</div>
 </section>
 
-<section class="!px-4 sm:!px-8 lg:!px-12 !py-6 sm:!py-8 lg:!py-6 flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-16 !mb-16">
+<section class="!px-4 sm:!px-8 lg:!px-12 !py-6 sm:!py-8 lg:!py-6 flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-16 !mb-16 sm:!mb-24 ">
 	<div class="w-full lg:w-auto">
 		<div class="flex flex-col gap-3 sm:gap-4 !p-2 sm:!p-4">
 			<h2 data-aos="fade-up" class="text-2xl sm:text-3xl lg:text-4xl font-thin text-[#285F99]">
@@ -141,14 +141,14 @@
 		<!-- Stats Cards -->
 		<div data-aos="fade-up" class="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 !ml-0 sm:!ml-4 !mt-6 sm:!mt-8 text-[#424557] justify-center sm:justify-start">
 			<div data-aos="fade-up" data-aos-duration="1500" class="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#C6D9DE] flex flex-col items-center rounded-2xl">
-				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin">60</h1>
+				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="4">0</span></h1>
 				<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
 					years of
 				</p>
 				<p class="text-lg sm:text-xl w-full text-left">Excellence</p>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#C6D9DE] flex flex-col items-center rounded-2xl">
-				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin">4000+</h1>
+				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
 				<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">of</p>
 				<p class="text-lg sm:text-xl text-left w-full">Employees</p>
 			</div>
@@ -156,7 +156,7 @@
 				<h1 class="text-3xl sm:text-4xl text-left w-full relative font-thin">
 					US
 					<span class="absolute text-xs sm:text-sm left-9 sm:left-10 font-thin">$</span>
-					5+
+					<span class="countup" data-target="5" data-duration="3000" data-step="1">0</span>+
 				</h1>
 				<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
 					paid up
@@ -172,19 +172,19 @@
 </section>
 <!-- Horizontal Accordion Section -->
 <section
-	class="relative w-full overflow-hidden rounded-3xl !px-4 sm:!px-8 !py-4 sm:!py-8 !mb-16">
+	class="relative w-full overflow-hidden !py-4 sm:!py-8 !mb-16">
 	<!-- AF Element (hidden on smaller screens) -->
 	<img
 	src="{{ theme_path }}/assets/static/AF_Element2.svg" alt="" class="hidden lg:!block absolute -top-15 -left-15 h-150 z-10 pointer-events-none"/>
 
 	<!-- Horizontal Accordion Container - Desktop (lg and up) -->
 	<div
-		id="accordion-container" class="hidden lg:!flex w-full h-[800px] rounded-3xl overflow-hidden"><!-- Accordion panels will be dynamically inserted here -->
+		id="accordion-container" class="hidden lg:!flex w-full h-[600px] overflow-hidden"><!-- Accordion panels will be dynamically inserted here -->
 	</div>
 
 	<!-- Vertical Accordion Container - Mobile & Tablet -->
 	<div
-		id="mobile-accordion-container" class="lg:hidden flex flex-col w-full rounded-3xl overflow-hidden"><!-- Mobile accordion panels will be dynamically inserted here -->
+		id="mobile-accordion-container" class="lg:hidden flex flex-col w-full overflow-hidden"><!-- Mobile accordion panels will be dynamically inserted here -->
 	</div>
 </section>
 <!-- Latest News Slider Section -->
@@ -217,7 +217,7 @@
 				</p>
 				<a
 					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
@@ -250,7 +250,7 @@
 				</p>
 				<a
 					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 
@@ -282,7 +282,7 @@
 				</p>
 				<a
 					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#9D8055] font-thin
-										          hover:bg-[#DECFB9] transition-colors duration-500 rounded text-lg
+										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
 

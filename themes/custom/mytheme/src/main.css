@@ -87,6 +87,7 @@ html {
   --text-base: 1rem;
   --text-lg: 1.2rem;
   --text-2xl: 1.6rem;
+  --rail-color: #2e5894;
 }
 
 body {
@@ -101,83 +102,91 @@ li {
 }
 
 
-#footer_logo{
-    background-color:transparent;
-    padding: 0;
-    margin: 0;
+#footer_logo {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
-#warning{
-    color: #756750;
+#warning {
+  color: #756750;
 }
+
 .vertical-text {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slide.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide-image {
+  opacity: 0;
+}
+
+.slide.active .slide-image {
+  animation: fadeInImage 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  from {
     opacity: 0;
-    pointer-events: none;
   }
-  
-  .slide.active {
-    position: relative;
+
+  to {
     opacity: 1;
-    pointer-events: auto;
   }
+}
 
-  .slide-image {
+/* Accordion Styles */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+
+.vertical-box-overlay {
+  background: var(--rail-color);
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
+    transform: translateY(10px);
   }
 
-  .slide.active .slide-image {
-    animation: fadeInImage 0.7s ease-in-out forwards;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  @keyframes fadeInImage {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+/* Smooth accordion transitions */
+.accordion-panel,
+.mobile-accordion-panel {
+  will-change: flex, height;
+}
 
-  /* Accordion Styles */
-  .vertical-text {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
+/* Hover effect for inactive panels */
+.accordion-panel:not(:has(.max-w-2xl)):hover {
+  opacity: 0.95;
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Smooth accordion transitions */
-  .accordion-panel,
-  .mobile-accordion-panel {
-    will-change: flex, height;
-  }
-
-  /* Hover effect for inactive panels */
-  .accordion-panel:not(:has(.max-w-2xl)):hover {
-    opacity: 0.95;
-  }
-
-  .mobile-accordion-panel:not([style*="400px"]):hover {
-    opacity: 0.95;
-  }
+.mobile-accordion-panel:not([style*="400px"]):hover {
+  opacity: 0.95;
+}
 
 /* Fade animation for year and info text */
 .fade-anim {
@@ -203,12 +212,13 @@ li {
   justify-content: center;
   /* pointer-events: none; */
 }
-.tile-bg{
-    background-image:url("./images/timeline/bg.jpg");
-    background-repeat:repeat;
-    background-position:top center;
-    background-size:100px auto;
-  }
+
+.tile-bg {
+  background-image: url("./images/timeline/bg.jpg");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: 100px auto;
+}
 
 .inner-circle {
   position: absolute;
@@ -367,14 +377,18 @@ li {
   color: #e2e2e2;
   opacity: 1;
 }
+
 /* show 1965 above the first tick */
 .timeline-bar .timeline-tick:first-child::before {
   content: '1965';
   position: absolute;
-  bottom: 100%;          /* above the tick */
-  left: 50%;             /* center over the tick */
+  bottom: 100%;
+  /* above the tick */
+  left: 50%;
+  /* center over the tick */
   transform: translateX(-50%);
-  margin-bottom: 8px;    /* space above the tick */
+  margin-bottom: 8px;
+  /* space above the tick */
   font-size: 16px;
   color: #bbbaba;
   pointer-events: none;

@@ -10,6 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//countup
+(function () {
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+
+  function animateCount(el) {
+    const target = Number(el.dataset.target || 0);
+    const duration = Number(el.dataset.duration || 1500);
+    const step = Math.max(1, Number(el.dataset.step || 1));
+    const start = performance.now();
+
+    function frame(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = easeOutCubic(p) * target;
+
+      // Snap to the nearest LOWER multiple of `step`
+      const stepped = Math.floor(eased / step) * step;
+
+      el.textContent = Math.min(stepped, target).toLocaleString();
+
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = target.toLocaleString(); // ensure exact final number
+    }
+    requestAnimationFrame(frame);
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        if (!el.dataset.done) {
+          el.dataset.done = "1";
+          animateCount(el);
+        }
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll(".countup").forEach(el => io.observe(el));
+})();
 
 //sidebar
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
@@ -248,6 +288,8 @@ function createDesktopAccordion() {
   businessVerticals.forEach((vertical, index) => {
     const panel = document.createElement('div');
     panel.className = 'accordion-panel relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out';
+    const rail = (index % 2 === 0) ? '#2e5894' : '#1d3467';
+    panel.style.setProperty('--rail-color', rail);
     panel.style.flex = index === activeAccordionIndex ? '1 1 70%' : '1 1 5%';
     panel.dataset.index = index;
 
@@ -260,8 +302,8 @@ function createDesktopAccordion() {
 
     // Overlay for better text readability
     const overlay = document.createElement('div');
-    overlay.className = 'absolute inset-0 bg-black transition-opacity duration-700';
-    overlay.style.opacity = index === activeAccordionIndex ? '0.3' : '0.5';
+    overlay.className = 'absolute inset-0 vertical-box-overlay transition-opacity duration-700';
+    overlay.style.opacity = index === activeAccordionIndex ? '0' : '1';
 
     // Content container
     // Content container
@@ -274,13 +316,12 @@ function createDesktopAccordion() {
         <div class="flex items-end gap-12 !p-8 w-full">
           <div class="flex flex-col items-center gap-4">
             <p class="text-white text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
-            <div class="w-4 h-4 rounded-sm" style="background-color: ${vertical.color}"></div>
+            <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
-          <div class="text-white space-y-6 max-w-2xl flex flex-col gap-6 !mb-20 !ml-20">
+          <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
             <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
-    <a
-					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+    <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
 										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
@@ -300,7 +341,7 @@ function createDesktopAccordion() {
         <div class="w-full h-full flex items-end justify-center !pb-8">
           <div class="flex flex-col items-center gap-4">
             <p class="text-white text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
-            <div class="w-4 h-4 rounded-sm" style="background-color: ${vertical.color}"></div>
+            <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
         </div>
       `;
@@ -328,14 +369,14 @@ function setActivePanel(newIndex) {
 
   panels.forEach((panel, index) => {
     const bgImg = panel.querySelector('img');
-    const overlay = panel.querySelector('.absolute.bg-black');
+    const overlay = panel.querySelector('.absolute.vertical-box-overlay');
     const content = panel.querySelector('.absolute.inset-0.flex');
 
     if (index === newIndex) {
       // Activate this panel
       panel.style.flex = '1 1 70%';
       bgImg.style.opacity = '1';
-      overlay.style.opacity = '0.3';
+      overlay.style.opacity = '0';
 
       // Match new desktop accordion layout
       setTimeout(() => {
@@ -343,16 +384,15 @@ function setActivePanel(newIndex) {
           <div class="flex items-end gap-12 !p-8 w-full">
             <div class="flex flex-col items-center gap-4">
               <p class="text-white text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
-              <div class="w-4 h-4 rounded-sm" style="background-color: ${businessVerticals[index].color}"></div>
+              <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
-            <div class="text-white space-y-6 max-w-2xl flex flex-col gap-6 !mb-20 !ml-20">
+            <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
               <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" 
                   style="text-decoration-color: ${businessVerticals[index].underlineColor}">
                   ${businessVerticals[index].heading}
               </h2>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
-                <a
-					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+                <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
 										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
@@ -372,7 +412,7 @@ function setActivePanel(newIndex) {
       // Deactivate this panel
       panel.style.flex = '1 1 5%';
       bgImg.style.opacity = '0.7';
-      overlay.style.opacity = '0.5';
+      overlay.style.opacity = '1';
 
       // Match inactive state style
       setTimeout(() => {
@@ -380,7 +420,7 @@ function setActivePanel(newIndex) {
           <div class="w-full h-full flex items-end justify-center !pb-8">
             <div class="flex flex-col items-center gap-4">
               <p class="text-white text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
-              <div class="w-4 h-4 rounded-sm" style="background-color: ${businessVerticals[index].color}"></div>
+              <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
           </div>
         `;
@@ -401,6 +441,8 @@ function createMobileAccordion() {
   businessVerticals.forEach((vertical, index) => {
     const panel = document.createElement('div');
     panel.className = 'mobile-accordion-panel relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out';
+    const rail = (index % 2 === 0) ? '#2e5894' : '#1d3467';
+    panel.style.setProperty('--rail-color', rail);
     panel.style.height = index === activeAccordionIndex ? '400px' : '60px';
     panel.dataset.index = index;
 
@@ -413,8 +455,8 @@ function createMobileAccordion() {
 
     // Overlay
     const overlay = document.createElement('div');
-    overlay.className = 'absolute inset-0 bg-black transition-opacity duration-700';
-    overlay.style.opacity = index === activeAccordionIndex ? '0.3' : '0.6';
+    overlay.className = 'absolute inset-0 vertical-box-overlay transition-opacity duration-700';
+    overlay.style.opacity = index === activeAccordionIndex ? '0' : '1';
 
     // Content
     const content = document.createElement('div');
@@ -425,14 +467,13 @@ function createMobileAccordion() {
       content.innerHTML = `
         <div class="text-white space-y-6 !p-8">
           <div class="flex items-center gap-2 mb-2">
-            <div class="w-3 h-3 rounded-sm" style="background-color: ${vertical.color}"></div>
+            <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
             <p class="text-xs tracking-wide uppercase">${vertical.name}</p>
           </div>
           <div class="flex flex-col gap-3">
             <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
-            <a
-					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+            <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
 										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
@@ -450,7 +491,7 @@ function createMobileAccordion() {
       // Inactive - just title
       content.innerHTML = `
         <div class="flex items-center gap-3 h-full !pl-2">
-          <div class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: ${vertical.color}"></div>
+          <div class="w-2 h-2 flex-shrink-0" style="background-color: ${vertical.color}"></div>
           <p class="text-white text-sm tracking-wide uppercase font-medium">${vertical.name}</p>
         </div>
       `;
@@ -478,27 +519,26 @@ function setActiveMobilePanel(newIndex) {
 
   panels.forEach((panel, index) => {
     const bgImg = panel.querySelector('img');
-    const overlay = panel.querySelector('.absolute.bg-black');
+    const overlay = panel.querySelector('.absolute.vertical-box-overlay');
     const content = panel.querySelector('.absolute.inset-0.p-4');
 
     if (index === newIndex) {
       // Activate
       panel.style.height = '400px';
       bgImg.style.opacity = '1';
-      overlay.style.opacity = '0.3';
+      overlay.style.opacity = '0';
 
       setTimeout(() => {
         content.innerHTML = `
           <div class="text-white space-y-3 opacity-0 !p-8" style="animation: fadeIn 0.7s forwards;">
             <div class="flex items-center gap-2 !mb-2">
-              <div class="w-3 h-3 rounded-sm" style="background-color: ${businessVerticals[index].color}"></div>
+              <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
               <p class="text-xs tracking-wide uppercase">${businessVerticals[index].name}</p>
             </div>
             <div class="flex flex-col gap-3">
               <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
-               <a
-					data-aos="fade-up" href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
+               <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
 										           transition-colors duration-500 rounded text-lg
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
@@ -517,12 +557,12 @@ function setActiveMobilePanel(newIndex) {
       // Deactivate
       panel.style.height = '60px';
       bgImg.style.opacity = '0.7';
-      overlay.style.opacity = '0.6';
+      overlay.style.opacity = '1';
 
       setTimeout(() => {
         content.innerHTML = `
           <div class="flex items-center gap-3 h-full !pl-4">
-            <div class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: ${businessVerticals[index].color}"></div>
+            <div class="w-2 h-2 flex-shrink-0" style="background-color: ${businessVerticals[index].color}"></div>
             <p class="text-white text-sm tracking-wide uppercase font-medium">${businessVerticals[index].name}</p>
           </div>
         `;
