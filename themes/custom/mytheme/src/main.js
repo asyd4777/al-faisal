@@ -289,7 +289,7 @@ function createDesktopAccordion() {
   businessVerticals.forEach((vertical, index) => {
     const panel = document.createElement('div');
     panel.className = 'accordion-panel relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out';
-    const rail = (index % 2 === 0) ? '#2e5894' : '#1d3467';
+    const rail = (index % 2 === 0) ? '#868d99' : '#868d99';
     panel.style.setProperty('--rail-color', rail);
     panel.style.flex = index === activeAccordionIndex ? '1 1 70%' : '1 1 5%';
     panel.dataset.index = index;
@@ -303,8 +303,8 @@ function createDesktopAccordion() {
 
     // Overlay for better text readability
     const overlay = document.createElement('div');
-    overlay.className = 'absolute inset-0 vertical-box-overlay transition-opacity duration-700';
-    overlay.style.opacity = index === activeAccordionIndex ? '0' : '1';
+    overlay.className = 'absolute inset-0 vertical-box-overlay  transition-opacity duration-700';
+    overlay.style.opacity = index === activeAccordionIndex ? '0' : '0.2';
 
     // Content container
     // Content container
@@ -316,7 +316,7 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="flex items-end gap-12 !p-8 w-full">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
           <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
@@ -341,7 +341,7 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="w-full h-full flex items-end justify-center !pb-8">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
         </div>
@@ -384,7 +384,7 @@ function setActivePanel(newIndex) {
         content.innerHTML = `
           <div class="flex items-end gap-12 !p-8 w-full">
             <div class="flex flex-col items-center gap-4">
-              <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
+              <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
               <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
             <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
@@ -413,7 +413,7 @@ function setActivePanel(newIndex) {
       // Deactivate this panel
       panel.style.flex = '1 1 5%';
       bgImg.style.opacity = '0.7';
-      overlay.style.opacity = '1';
+      overlay.style.opacity = '0.7';
 
       // Match inactive state style
       setTimeout(() => {
@@ -452,12 +452,12 @@ function createMobileAccordion() {
     bgImg.src = vertical.image;
     bgImg.alt = vertical.name;
     bgImg.className = 'absolute inset-0 w-full h-full object-cover transition-opacity duration-700';
-    bgImg.style.opacity = index === activeAccordionIndex ? '1' : '0.7';
+    bgImg.style.opacity = index === activeAccordionIndex ? '1' : '1';
 
     // Overlay
     const overlay = document.createElement('div');
     overlay.className = 'absolute inset-0 vertical-box-overlay transition-opacity duration-700';
-    overlay.style.opacity = index === activeAccordionIndex ? '0' : '1';
+    overlay.style.opacity = index === activeAccordionIndex ? '0' : '0.2';
 
     // Content
     const content = document.createElement('div');
@@ -558,7 +558,7 @@ function setActiveMobilePanel(newIndex) {
       // Deactivate
       panel.style.height = '60px';
       bgImg.style.opacity = '0.7';
-      overlay.style.opacity = '1';
+      overlay.style.opacity = '0.2';
 
       setTimeout(() => {
         content.innerHTML = `

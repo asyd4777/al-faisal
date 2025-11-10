@@ -1,0 +1,42 @@
+Integration Guide
+=================
+
+WordPress
+---------
+
+- Sign in to WordPress as admin user
+
+- Install hologram-globe.zip via Plugins > Add New > Upload Plugin
+  (or unzip the files and upload them to /wp-content/plugins/hologram-globe)
+ 
+- Activate the plugin
+
+- Paste this shortcode into a block or editor:  [hyper-hologram-globe]  
+  (or use this in a theme file: <?php echo do_shortcode('[hyper-hologram-globe]'); ?>)
+  
+
+Other Systems and HTML Pages
+----------------------------
+
+- Unzip hologram-globe.zip and upload the files to the webserver or a CDN
+  (if you are using a CDN, see the documentation for "CORS")
+
+- Paste this into your page:
+  <script async src="./hologram-globe.loader.js?v20"></script>
+  
+  Replace ./ with the correct URL, e.g. 
+  https://www.example.com/files/hologram-globe/hologram-globe.loader.js
+
+  Use a way provided by your CMS or page builder to insert HTML.
+  You can also integrate it into a template or static HTML file.
+  
+  
+All in One Bundle
+-----------------
+
+The simple and fail-safe method, with the library and assets embedded in the HTML.
+
+- Unzip hologram-globe.zip, open hologram-globe.bundle.htm in a text editor and copy all.
+
+- Paste it into your page. Use a way provided by your CMS or page builder 
+  to insert HTML. You can also integrate it into a template or static HTML file.  

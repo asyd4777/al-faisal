@@ -3,6 +3,7 @@
 	{% if theme_path is not defined %}
 {% set theme_path = url('<front>')|render ~ 'themes/custom/mytheme' %}
 {% endif %}
+
 	<section
 	class="w-[100%] h-[80vh] relative !mb-4 overflow-hidden"> <!-- Background autoplay video -->
 	<video id="hero-video" class="absolute inset-0 w-full h-full object-cover z-0 opacity-0 transition-opacity duration-1000" muted playsinline poster="{{ theme_path }}/assets/static/Header_Video_Cover.jpg">
@@ -24,7 +25,7 @@
 </section>
 
 <section
-	class="!px-6 !py-8 flex flex-col lg:flex-row lg:items-start items-center lg:justify-around justify-center gap-12 !mb-24 relative z-[20]">
+	class="!px-6 !py-8 flex flex-col lg:flex-row lg:items-start items-center lg:justify-around justify-center gap-12 !mb-10 relative z-[20]">
 	<!-- LEFT SIDE -->
 	<div data-aos="fade-up" class="flex flex-col gap-4 max-w-xl text-left">
 		<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99]">
@@ -51,7 +52,7 @@
 	</div>
 
 	<!-- RIGHT SIDE -->
-	<div data-aos="fade-up" data-aos-duration="3000" class="bg-[#E0E4E8]/90 w-full max-w-md !px-6 !py-10 rounded-[12px] text-left xl:!-mt-56">
+	<div data-aos="fade-up" data-aos-duration="3000" class="bg-[#d1dbe5]/90 w-full max-w-md !px-6 !py-10 rounded-[12px] text-left xl:!-mt-56">
 		<div class="flex flex-col gap-4 text-[#445467]">
 			<h2 class="text-2xl sm:text-[28px] font-thin">Our Establishment</h2>
 			<p class="text-base sm:text-lg">
@@ -66,17 +67,17 @@
 			<!-- Top 3 boxes -->
 			<div class="flex flex-wrap gap-4">
 				<div data-aos="fade-up" data-aos-duration="1500" class="flex-1 min-w-[100px] !px-4 !py-6 bg-[#F2F1F0] flex flex-col rounded-2xl">
-					<h1 class="text-3xl sm:text-4xl font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="2">0</span></h1>
+					<h1 class="text-3xl  font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="2">0</span></h1>
 					<p class="text-xs sm:text-sm mt-2">years of</p>
 					<p class="text-base sm:text-lg">Excellence</p>
 				</div>
 				<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="flex-1 min-w-[100px] !px-4 !py-6 bg-[#F2F1F0] flex flex-col rounded-2xl">
-					<h1 class="text-3xl sm:text-4xl font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
+					<h1 class="text-3xl font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
 					<p class="text-xs sm:text-sm mt-2">of</p>
 					<p class="text-base sm:text-lg">Employees</p>
 				</div>
 				<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500" class="flex-1 min-w-[100px] !px-4 !py-6 bg-[#F2F1F0] flex flex-col rounded-2xl">
-					<h1 class="text-3xl sm:text-4xl relative font-thin">
+					<h1 class="text-3xl relative font-thin">
 						US
 						<span class="absolute text-xs sm:text-sm left-10 font-thin">$</span>
 						<span class="countup" data-target="5" data-duration="3000" data-step="1">5</span>+
@@ -95,8 +96,8 @@
 	</div>
 </section>
 
-<section class="!px-4 sm:!px-8 lg:!px-12 !py-6 sm:!py-8 lg:!py-6 flex flex-col xl:flex-row items-center justify-around gap-6 sm:gap-8 !mb-16 sm:!mb-24 relative">
-	<img src="{{ theme_path }}/assets/static/AF_ElementNew.svg" alt="" class="h-100 absolute z-0 top-90 left-[30%] xl:!block hidden"/>
+<section class="!px-4 sm:!px-8 lg:!px-12 !py-6 flex flex-col xl:flex-row items-center justify-around gap-6 sm:gap-8 !mb-12 relative overflow-hidden">
+	<img src="{{ theme_path }}/assets/static/AF_ElementNew.svg" alt="" class="h-100 absolute z-0 top-40 right-[-20%] xl:!block hidden"/>
 
 	<div data-aos="fade-up" class="relative z-[10] w-full xl:w-auto flex justify-center">
 		<img src="{{ theme_path }}/assets/static/chairman.jpg" alt="Chairman" class="h-56 sm:h-70 lg:h-100 xl:h-120 w-auto max-w-full object-cover rounded-lg"/>
@@ -125,7 +126,7 @@
 	</div>
 </section>
 
-<section class="!px-4 sm:!px-8 lg:!px-12 !py-6 sm:!py-8 lg:!py-6 flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-16 !mb-16 sm:!mb-24 ">
+<section class="!px-4 sm:!px-8 lg:!px-12 flex flex-col lg:flex-row items-center justify-around gap-8 lg:gap-16 !mb-10 ">
 	<div class="w-full lg:w-auto">
 		<div class="flex flex-col gap-3 sm:gap-4 !p-2 sm:!p-4">
 			<h2 data-aos="fade-up" class="text-2xl sm:text-3xl lg:text-4xl font-thin text-[#285F99]">
@@ -141,19 +142,19 @@
 		<!-- Stats Cards -->
 		<div data-aos="fade-up" class="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 !ml-0 sm:!ml-4 !mt-6 sm:!mt-8 text-[#424557] justify-center sm:justify-start">
 			<div data-aos="fade-up" data-aos-duration="1500" class="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#C6D9DE] flex flex-col items-center rounded-2xl">
-				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="4">0</span></h1>
+				<h1 class="text-3xl  text-left w-full font-thin"><span class="countup" data-target="60" data-duration="3000" data-step="4">0</span></h1>
 				<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
 					years of
 				</p>
 				<p class="text-lg sm:text-xl w-full text-left">Excellence</p>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#C6D9DE] flex flex-col items-center rounded-2xl">
-				<h1 class="text-3xl sm:text-4xl text-left w-full font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
+				<h1 class="text-3xl  text-left w-full font-thin"><span class="countup" data-target="4000" data-duration="5000" data-step="25">0</span>+</h1>
 				<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">of</p>
 				<p class="text-lg sm:text-xl text-left w-full">Employees</p>
 			</div>
 			<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500" class="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#C6D9DE] flex flex-col items-center rounded-2xl">
-				<h1 class="text-3xl sm:text-4xl text-left w-full relative font-thin">
+				<h1 class="text-3xl  text-left w-full relative font-thin">
 					US
 					<span class="absolute text-xs sm:text-sm left-9 sm:left-10 font-thin">$</span>
 					<span class="countup" data-target="5" data-duration="3000" data-step="1">0</span>+
@@ -166,9 +167,9 @@
 		</div>
 	</div>
 
-	<div data-aos="zoom-in" class="w-full lg:w-auto flex justify-center">
-		<img src="{{ theme_path }}/assets/static/Layer 24.png" alt="footprint" class="h-60 sm:h-80 lg:h-100 w-auto max-w-full object-contain"/>
-	</div>
+	<div data-aos="zoom-in" class="w-full lg:w-auto h-[500px] flex justify-center">
+	<script async src="{{ theme_path }}/assets/static/globe/hologram-globe.loader.js?v19"></script>
+		</div>
 </section>
 <!-- Horizontal Accordion Section -->
 <section
@@ -193,16 +194,17 @@
 	<!-- Rounded colored background covering 70% from the left on large screens, full width on small screens -->
 	<div class="absolute left-0 top-0 h-full w-full lg:w-[70%] bg-[#D8E1E7] lg:rounded-r-3xl z-0"></div>
 
-	<!-- Vertical Dots Navigation -->
-	<div class="hidden absolute left-10 lg:left-8 top-1/2 transform -translate-y-1/2 z-20 lg:!flex flex-col gap-3">
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300" data-slide="0"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="1"></button>
-		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="2"></button>
-	</div>
+	
 
 	<!-- Slider Container -->
 	<div
 		class="slider-container relative w-full h-full">
+		<!-- Vertical Dots Navigation -->
+	<div class="hidden absolute lg:!pr-8 lg:!pl-12 lg:!bottom-5 transform  z-20 lg:!flex flex-row gap-3">
+		<button class="slider-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300" data-slide="0"></button>
+		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="1"></button>
+		<button class="slider-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300" data-slide="2"></button>
+	</div>
 		<!-- Slide 1 -->
 		<div class="slide active flex flex-col lg:flex-row items-center !gap-6 lg:!gap-12 w-full transition-opacity duration-500">
 			<div class="w-full lg:w-[55%] xl:w-[50%] relative z-10 text-white lg:!pr-8 lg:!pl-12">

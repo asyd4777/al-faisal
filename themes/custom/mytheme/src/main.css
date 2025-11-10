@@ -76,7 +76,40 @@ html {
   font-weight: 700;
   font-style: italic;
 }
+@font-face {
+  font-family: 'noto-kufi-arabic';
+  src: url('./fonts/noto-kufi-arabic-latin-100-normal.ttf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'noto-kufi-arabic';
+  src: url('./fonts/noto-kufi-arabic-latin-200-normal.ttf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noto-kufi-arabic';
+  src: url('./fonts/noto-kufi-arabic-latin-300-normal.ttf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noto-kufi-arabic';
+  src: url('./fonts/noto-kufi-arabic-latin-400-normal.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noto-kufi-arabic';
+  src: url('./fonts/noto-kufi-arabic-latin-500-normal.ttf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 * {
   padding: 0;
@@ -88,12 +121,13 @@ html {
   --text-lg: 1.2rem;
   --text-2xl: 1.6rem;
   --rail-color: #2e5894;
+  --font-weight-thin: 200;
 }
 
 body {
-  background-color: #F7F0E9;
-  font-family: 'FSSienaTrial', sans-serif;
-  font-weight: 100;
+  background-color: #ffffff;
+  font-family: 'noto-kufi-arabic', sans-serif;
+  font-weight: 200;
 }
 
 ul,

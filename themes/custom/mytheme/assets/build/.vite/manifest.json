@@ -39,6 +39,26 @@
     "file": "FSSienaTrial-ThinItalic.otf",
     "src": "src/fonts/FSSienaTrial-ThinItalic.otf"
   },
+  "src/fonts/noto-kufi-arabic-latin-100-normal.ttf": {
+    "file": "noto-kufi-arabic-latin-100-normal.ttf",
+    "src": "src/fonts/noto-kufi-arabic-latin-100-normal.ttf"
+  },
+  "src/fonts/noto-kufi-arabic-latin-200-normal.ttf": {
+    "file": "noto-kufi-arabic-latin-200-normal.ttf",
+    "src": "src/fonts/noto-kufi-arabic-latin-200-normal.ttf"
+  },
+  "src/fonts/noto-kufi-arabic-latin-300-normal.ttf": {
+    "file": "noto-kufi-arabic-latin-300-normal.ttf",
+    "src": "src/fonts/noto-kufi-arabic-latin-300-normal.ttf"
+  },
+  "src/fonts/noto-kufi-arabic-latin-400-normal.ttf": {
+    "file": "noto-kufi-arabic-latin-400-normal.ttf",
+    "src": "src/fonts/noto-kufi-arabic-latin-400-normal.ttf"
+  },
+  "src/fonts/noto-kufi-arabic-latin-500-normal.ttf": {
+    "file": "noto-kufi-arabic-latin-500-normal.ttf",
+    "src": "src/fonts/noto-kufi-arabic-latin-500-normal.ttf"
+  },
   "src/images/Slide_AAMAL.jpg": {
     "file": "Slide_AAMAL.jpg",
     "src": "src/images/Slide_AAMAL.jpg"
