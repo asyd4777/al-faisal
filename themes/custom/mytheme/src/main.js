@@ -316,14 +316,14 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="flex items-end gap-12 !p-8 w-full">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#ffffff] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
           <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
-            <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
+            <h2 class="text-3xl font-thin underline underline-offset-8 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h2>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
-    <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
-										           transition-colors duration-500 rounded text-lg
+    <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-light
+										           transition-colors duration-500 rounded text-[17px]
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
@@ -341,7 +341,7 @@ function createDesktopAccordion() {
       content.innerHTML = `
         <div class="w-full h-full flex items-end justify-center !pb-8">
           <div class="flex flex-col items-center gap-4">
-            <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
+            <p class="text-[#ffffff] text-base tracking-widest uppercase vertical-text">${vertical.name}</p>
             <div class="w-2 h-2" style="background-color: ${vertical.color}"></div>
           </div>
         </div>
@@ -377,24 +377,24 @@ function setActivePanel(newIndex) {
       // Activate this panel
       panel.style.flex = '1 1 70%';
       bgImg.style.opacity = '1';
-      overlay.style.opacity = '0';
+      overlay.style.opacity = '0.2';
 
       // Match new desktop accordion layout
       setTimeout(() => {
         content.innerHTML = `
           <div class="flex items-end gap-12 !p-8 w-full">
             <div class="flex flex-col items-center gap-4">
-              <p class="text-[#cdc1c0] text-base tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
+              <p class="text-[#ffffff] text-base tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
               <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
             <div class="text-white space-y-6 max-w-lg flex flex-col gap-6 !mb-20 !ml-20">
-              <h2 class="text-3xl font-light underline underline-offset-8 tracking-wide" 
+              <h2 class="text-3xl font-thin underline underline-offset-8 tracking-wide" 
                   style="text-decoration-color: ${businessVerticals[index].underlineColor}">
                   ${businessVerticals[index].heading}
               </h2>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
-                <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
-										           transition-colors duration-500 rounded text-lg
+                <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-light
+										           transition-colors duration-500 rounded text-[17px]
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
@@ -413,14 +413,14 @@ function setActivePanel(newIndex) {
       // Deactivate this panel
       panel.style.flex = '1 1 5%';
       bgImg.style.opacity = '0.7';
-      overlay.style.opacity = '0.7';
+      overlay.style.opacity = '0.2';
 
       // Match inactive state style
       setTimeout(() => {
         content.innerHTML = `
           <div class="w-full h-full flex items-end justify-center !pb-8">
             <div class="flex flex-col items-center gap-4">
-              <p class="text-[#cdc1c0] text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
+              <p class="text-[#ffffff] text-lg tracking-widest uppercase vertical-text">${businessVerticals[index].name}</p>
               <div class="w-2 h-2" style="background-color: ${businessVerticals[index].color}"></div>
             </div>
           </div>
@@ -442,7 +442,7 @@ function createMobileAccordion() {
   businessVerticals.forEach((vertical, index) => {
     const panel = document.createElement('div');
     panel.className = 'mobile-accordion-panel relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out';
-    const rail = (index % 2 === 0) ? '#2e5894' : '#1d3467';
+    const rail = (index % 2 === 0) ? '#475467' : '#475467';
     panel.style.setProperty('--rail-color', rail);
     panel.style.height = index === activeAccordionIndex ? '400px' : '60px';
     panel.dataset.index = index;
@@ -472,10 +472,10 @@ function createMobileAccordion() {
             <p class="text-xs tracking-wide uppercase">${vertical.name}</p>
           </div>
           <div class="flex flex-col gap-3">
-            <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
+            <h3 class="text-xl font-thin underline underline-offset-4 tracking-wide" style="text-decoration-color: ${vertical.underlineColor}">${vertical.heading}</h3>
             <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${vertical.content}</p>
-            <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
-										           transition-colors duration-500 rounded text-lg
+            <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-light
+										           transition-colors duration-500 rounded text-[17px]
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 
@@ -537,10 +537,10 @@ function setActiveMobilePanel(newIndex) {
               <p class="text-xs tracking-wide uppercase">${businessVerticals[index].name}</p>
             </div>
             <div class="flex flex-col gap-3">
-              <h3 class="text-xl font-light underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
+              <h3 class="text-xl font-thin underline underline-offset-4 tracking-wide" style="text-decoration-color: ${businessVerticals[index].underlineColor}">${businessVerticals[index].heading}</h3>
               <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">${businessVerticals[index].content}</p>
-               <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-thin
-										           transition-colors duration-500 rounded text-lg
+               <a href="#" class="group text-[#bbccd5] !mt-4 !px-5 !py-1.5 sm:w-[200px] border border-[#bbccd5] font-light
+										           transition-colors duration-500 rounded text-[17px]
 										          w-fit flex items-center gap-2 focus-visible:outline-none
 										          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#bbccd5]" aria-label="Read more about Faisal Holding">
 

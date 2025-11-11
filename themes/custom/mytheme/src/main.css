@@ -118,10 +118,9 @@ html {
 
 :root {
   --text-base: 1rem;
-  --text-lg: 1.2rem;
   --text-2xl: 1.6rem;
-  --rail-color: #2e5894;
-  --font-weight-thin: 200;
+  --rail-color: #868d99;
+  --font-weight-thin: 100;
 }
 
 body {
