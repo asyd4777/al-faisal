@@ -289,7 +289,7 @@ function createDesktopAccordion() {
   businessVerticals.forEach((vertical, index) => {
     const panel = document.createElement('div');
     panel.className = 'accordion-panel relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out';
-    const rail = (index % 2 === 0) ? '#868d99' : '#868d99';
+    const rail = (index % 2 === 0) ? '#475467' : '#475467';
     panel.style.setProperty('--rail-color', rail);
     panel.style.flex = index === activeAccordionIndex ? '1 1 70%' : '1 1 5%';
     panel.dataset.index = index;

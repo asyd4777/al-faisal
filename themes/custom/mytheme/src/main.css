@@ -119,9 +119,12 @@ html {
 :root {
   --text-base: 1rem;
   --text-2xl: 1.6rem;
-  --rail-color: #868d99;
+  --rail-color: #475467;
   --font-weight-thin: 100;
 }
+	.globe-text {
+	font-weight: 800;
+	}
 
 body {
   background-color: #ffffff;

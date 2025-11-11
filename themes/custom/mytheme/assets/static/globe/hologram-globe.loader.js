@@ -1,7 +1,7 @@
 {
 	
 	let html = `
-<hyper-globe id="hologram-globe" data-location="13.0803 -84.6565" data-version="21" style="--preview-size: 800px; --globe-scale: 0.82; --globe-damping: 0.5; --map-density: 1; --map-height: 0.55; --point-size: 1.5; --backside-opacity: 0.32; --backside-transition: 0.6; --marker-size: 1.05; --text-size: 0.95; --line-color: #999999; --line-offset: 0.5; --autorotate: true; --autorotate-speed: 0.65; --autorotate-delay: 4; --autorotate-latitude: 10; --title-position: 0 -1; --title-padding: 1.2; --text-padding: 1; --animation: offset; --animation-intensity: 0.41; --animation-scale: 0.75; --animation-speed: 0.25; --point-opacity-map: url('light.jpg'); --marker-image: url('hologram-marker.png'); max-width: 500px; --preview-color: #ffffff; --text-height: 1.1; --line-thickness: 1; --point-image: url('hologram-point.png'); --equator: true; --islands: true; --backside-color: #5095db; --marker-offset: 0.2; --globe-foreground: url('earth-atmosphere.svg'); --point-color: #5095db; --text-color: #000000; --point-color-blend: multiply; --text-outline: #5095db; --text-depth: 1;">
+<hyper-globe id="hologram-globe" data-location="13.0803 -84.6565" data-version="21" style="--preview-size: 800px; --globe-scale: 0.82; --globe-damping: 0.5; --map-density: 1; --map-height: 0.55; --point-size: 1.5; --backside-opacity: 0.32; --backside-transition: 0.6; --marker-size: 1.05; --text-size: 1; --line-color: #999999; --line-offset: 0.5; --autorotate: true; --autorotate-speed: 0.65; --autorotate-delay: 4; --autorotate-latitude: 10; --title-position: 0 -1; --title-padding: 0.9; --text-padding: 1; --animation: offset; --animation-intensity: 0.41; --animation-scale: 0.75; --animation-speed: 0.25; --point-opacity-map: url('light.jpg'); --marker-image: url('hologram-marker.png'); max-width: 500px; --preview-color: #ffffff; --text-height: 1.1; --line-thickness: 1; --point-image: url('hologram-point.png'); --equator: true; --islands: true; --backside-color: #5095db; --marker-offset: 0.2; --globe-foreground: url('earth-atmosphere.svg'); --point-color: #5095db; --text-color: #4b4b4b; --point-color-blend: multiply;  --text-depth: 1;">
 	<a slot="markers" data-location="42 -88" title="CHICAGO" class="globe-marker">
 </a>
 <a slot="markers" data-location="-39 -77" title="WASHIXGTON D.C." class="globe-marker"></a>
@@ -26,6 +26,7 @@
 	opacity: 1;
 	--marker-size: 1.5;
 }
+
 
 --globe-background {
 color:#000000;
