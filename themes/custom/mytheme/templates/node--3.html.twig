@@ -1,0 +1,150 @@
+{# web/themes/custom/mytheme/templates/node--2.html.twig #}
+{# --- TIMELINE CONTENT START --- #}
+	{% if theme_path is not defined %}
+{% set theme_path = url('<front>')|render ~ 'themes/custom/mytheme' %}
+{% endif %}
+
+	<section class="w-full h-[100vh] relative overflow-hidden"> <img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_Header.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"/>
+	<div class="absolute inset-0 flex items-center justify-end !pr-6 md:!pr-16 lg:!pr-32">
+		<p data-aos="fade-up" class="philanthropy-heading text-white text-left text-2xl md:text-4xl leading-tight max-w-lg">
+			A Vision for Culture<br/>Education &amp; Heritage
+		</p>
+	</div>
+</section>
+<section class="w-full !p-10 md:!p-20 lg:!p-28 z-[5] !mb-10">
+	<div class="flex flex-col gap-4 items-center justify-center">
+		<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99] text-center">
+			Our Founder’s Guiding Principles
+		</h2>
+		<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B] text-center max-w-5xl">
+			Sheikh Faisal considers education, culture, and heritage as core
+						          pillars of nation-building and social advancement. His philanthropic
+						          philosophy integrates with Al Faisal Holding’s broader mission to
+						          support people-first development through investment in institutions
+						          that elevate society.
+		</p>
+	</div>
+</section>
+<section
+	class="w-full bg-[#E8E8E7] relative overflow-visible !px-10 md:!px-20 lg:!px-28 min-h-[100vh]">
+	<!-- Decorative SVG placed behind all content -->
+	<img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_DesignAsset1.svg" alt="" class="absolute bottom-0 left-0 w-full max-w-none z-[0] object-cover min-h-[100%] lg:h-auto hidden lg:!block" style="transform: translateY(26%) scale(0.70);"/>
+
+
+	<div class="container mx-auto relative z-[10] h-full !px-6 md:!px-12 !py-16 lg:!py-24">
+		<div
+			class="flex flex-col xl:flex-row items-center justify-between gap-10 lg:gap-16">
+			<!-- Left: text -->
+			<div class="w-full lg:w-1/2 flex flex-col gap-4 relative z-[20]">
+				<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99]">
+					Al Faisal Without Borders Foundation
+				</h2>
+				<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B]  max-w-xl">
+					Founded in 2008, Derwind Trading and Contracting specializes in
+										              high-quality construction projects across multiple sectors. The
+										              company is recognized for its innovative approach and efficient
+										              project management, delivering top-tier construction, renovation,
+										              and restoration services.
+				</p>
+				<a
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-light
+																				         transition-colors duration-500 rounded text-[17px]
+																				          w-fit flex items-center gap-2 focus-visible:outline-none
+																				          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
+						<span>Read More</span>
+					</span>
+				</a>
+			</div>
+
+			<!-- Right: image (mobile uses inline block; large screens use absolutely positioned wide image starting at the extreme right) -->
+			<!-- Mobile / small screens: keep inline image to preserve flow -->
+			<img
+			src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_WBF.jpg" alt="Al Faisal WBF" class="flex xl:hidden h-100 object-contain"/>
+
+			<!-- Large screens: absolutely positioned image anchored to the right edge -->
+			<img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_WBF.jpg" alt="Al Faisal WBF" class="absolute -right-28 hidden xl:!block h-170 object-contain "/>
+		</div>
+	</div>
+</section>
+
+<section class="w-full !px-10 md:!px-20 lg:!px-28 relative">
+	<div class="container mx-auto !px-6 md:!px-12 !py-16 lg:!py-12 z-[10]">
+		<div class="flex flex-col xl:flex-row items-center justify-around gap-8 lg:gap-12">
+			<div data-aos="fade-up" class="w-full lg:w-1/2 flex justify-start z-[11] h-full translate-y-0 xl:-translate-y-[135px]">
+				<div class="w-full max-w-xl lg:max-w-lg overflow-hidden">
+					<img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_GFCK.jpg" alt="Al Faisal WBF" class="w-full h-full object-contain"/>
+				</div>
+			</div>
+
+			<div class="w-full lg:w-1/2 flex flex-col gap-4 relative z-[20]">
+				<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99]">
+					Al Faisal Global Foundation<br/>
+					for Culture & Knowledge
+				</h2>
+				<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B] max-w-lg">
+					In January 2025, Sheikh Faisal inaugurated the Al Faisal Global
+										              Foundation for Culture and Knowledge, extending his philanthropy’s
+										              reach. The Foundation supports heritage documentation,
+										              publishes-depth cultural and historical works—including
+										              multilingual editions of
+				</p>
+				<a
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-light
+																				         transition-colors duration-500 rounded text-[17px]
+																				          w-fit flex items-center gap-2 focus-visible:outline-none
+																				          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
+						<span>Read More</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="w-full min-h-[100vh] relative overflow-hidden !px-4 md:!px-8 !py-12 md:!py-20 !mt-12">
+	<img
+	src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_FBQMjpg.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"/>
+
+	<!-- Top-right content box for FBQ section -->
+	<div class="absolute top-20 right-10 flex flex-col items-start justify-start text-white max-w-lg md:max-w-xl !p-4 md:!p-6 z-[10]">
+		<h2 data-aos="fade-up" class="text-4xl font-thin text-nowrap">
+			FBQ Museum &amp; Cultural Legacy
+		</h2>
+		<p data-aos="fade-up" class="!mt-4 text-base sm:text-lg leading-7 sm:leading-9 text-[#F7F0E9]">
+			Driven by his passion as a collector for over five decades, Sheikh
+						          Faisal established the Sheikh Faisal Bin Qassim Al Thani Museum (FBQ
+						          Museum), home to an eclectic collection of over 100,000 artifacts.
+		</p>
+	</div>
+</section>
+<section class="w-full !p-10 md:!p-20 lg:!p-28 !mt-20">
+	<div class="flex items-center justify-center w-full">
+		<div
+			class="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-12 max-w-7xl w-full justify-center items-center">
+			<!-- Hospitality -->
+			<div data-aos="fade-up" class="flex flex-col items-center w-full sm:w-1/2">
+				<img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_Hospitality_Thumb.jpg" alt="Hospitality" class="w-full h-[250px] md:h-[350px] object-cover"/>
+				<p data-aos="fade-up" class="text-center !mt-4 text-[#285F99] text-xl md:text-2xl">
+					Explore Hospitality
+				</p>
+			</div>
+
+			<!-- Construction -->
+			<div data-aos="fade-up" class="flex flex-col items-center w-full sm:w-1/2">
+				<img src="{{ theme_path }}/assets/static/philanthropy/AlFaisal_Philanthropy_RealEstate_Thumb.jpg" alt="Construction" class="w-full h-[250px] md:h-[350px] object-cover"/>
+				<p data-aos="fade-up" class="text-center !mt-4 text-[#285F99] text-xl md:text-2xl">
+					Explore Construction
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+{# --- TIMELINE CONTENT END --- #}
