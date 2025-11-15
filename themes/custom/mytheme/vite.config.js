@@ -15,6 +15,7 @@ export default defineConfig({
         main: 'src/main.js',
         styles: 'src/main.css', // change to 'src/main.css' if that’s your file
         timeline: 'src/timeline.js',
+        realestate: 'src/realestate.js',
       },
        output: {
         entryFileNames: '[name].js',

@@ -1,0 +1,199 @@
+{# web/themes/custom/mytheme/templates/node--2.html.twig #}
+{# --- TIMELINE CONTENT START --- #}
+{{ attach_library('mytheme/realestate') }}
+	{% if theme_path is not defined %}
+{% set theme_path = url('<front>')|render ~ 'themes/custom/mytheme' %}
+{% endif %}
+	<script>
+window.theme_path = "{{ theme_path }}";
+</script>
+	<section
+	class="w-[100%] h-[100vh] relative !mb-4 overflow-hidden"> <!-- Background autoplay video -->
+	<video id="hero-video-1" class="absolute inset-0 w-full h-full object-cover z-0 opacity-0 transition-opacity duration-1000" muted playsinline poster="{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_Header.jpg">
+		<source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4"/>
+		Your browser does not support the video tag.
+	</video>
+
+	<!-- Poster overlay (visible initially and after video ends) -->
+	<div id="video-poster-1" class="absolute inset-0 w-full h-full object-cover z-[1] bg-cover bg-center transition-opacity duration-1000" style="
+				          background-image: url('{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_Header.jpg');
+				        "></div>
+
+	<!-- Centered overlay text with clickable play button -->
+	<div class="absolute z-10 left-1/2 top-1/2 -translate-x-1/3 -translate-y-1/2 flex flex-col justify-start items-start md:flex-row md:items-center gap-3 text-left select-none">
+		<img id="play-button-1" src="{{ theme_path }}/assets/static/Play_Icon.svg" alt="Play video" class="h-16 sm:h-20 cursor-pointer transition-transform hover:scale-110"/>
+		<h2 id="hero-text-1" class="text-2xl sm:text-3xl md:text-4xl text-[#9B9AA3] leading-tight transition-opacity duration-1000 opacity-100">
+			Al Jazi Real Estate
+		</h2>
+
+		<script>
+			(function () {
+var video = document.getElementById('hero-video-1');
+var text = document.getElementById('hero-text-1');
+if (! video || ! text) 
+return;
+
+
+function fadeOut() {
+text.classList.remove('opacity-100');
+text.classList.add('opacity-0');
+}
+function fadeIn() {
+text.classList.remove('opacity-0');
+text.classList.add('opacity-100');
+}
+video.addEventListener('play', fadeOut);
+video.addEventListener('playing', fadeOut);
+video.addEventListener('pause', fadeIn);
+video.addEventListener('ended', fadeIn);
+})();
+		</script>
+	</div>
+
+	<!-- Decorative asset -->
+	<img src="{{ theme_path }}/assets/static/Footer_Aseet.svg" alt="footer asset" class="absolute -bottom-2 left-10 h-20 sm:h-28 md:h-32 lg:h-30 xl:h-50 xl:!block hidden z-10" style="transform: scaleX(-1)"/>
+	/>
+</section>
+
+<section class="w-full !p-10 md:!p-20 lg:!p-28 z-[5] !mb-10">
+	<div class="flex flex-col gap-4 items-center justify-center">
+		<h2 data-aos="fade-up" class="text-4xl font-thin text-[#285F99] text-center">
+			Al Jazi Real Estate
+		</h2>
+		<div data-aos="fade-up" class="w-full flex justify-center">
+			<span class="block w-45 h-1 bg-[#27AE60] rounded-full !mr-6"></span>
+		</div>
+		<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B] text-center max-w-7xl">
+			Established in 1995, Al Jazi Real Estate is a subsidiary of Al Faisal
+						          Holding and a leading real estate developer in Qatar. Known for its
+						          high-end residential and commercial properties, the company focuses on
+						          distinctive architecture and prime locations, delivering superior
+						          standards in landscaping and facility management.
+		</p>
+		<a
+			data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-light
+												         transition-colors duration-500 rounded text-[17px]
+												          w-fit flex items-center gap-2 focus-visible:outline-none
+												          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+			<!-- Wrap content so both icon + text move together -->
+			<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+				<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
+				<span>Explore Al Jazi</span>
+			</span>
+		</a>
+	</div>
+</section>
+
+<section class="w-full !p-10 md:!p-20 lg:!p-28 z-[5] !mb-10 bg-[#E7E7E7] relative">
+	<img src="{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_DesignAsset1.svg" alt="" class="absolute -bottom-23 -left-100 h-150 xl:!block hidden z-[-1]"/>
+	<div id="category-tabs" class="bg-[#286FA5] w-[90%] md:w-[70%] flex items-center text-white !p-4 md:!p-8 gap-4 justify-around absolute -top-8 md:-top-10 left-1/2 -translate-x-1/2">
+		<button id="tab-residential" class="cursor-pointer select-none">
+			Residential Projects
+		</button>
+		<span>|</span>
+		<button id="tab-commercial" class="cursor-pointer select-none">
+			Commercial Projects
+		</button>
+		<span>|</span>
+		<button id="tab-compound" class="cursor-pointer select-none">
+			Compound
+		</button>
+	</div>
+	<div class="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 items-start justify-center w-full">
+		<div id="project-list" class="bg-[#D7D6D4] !py-12 !mt-10 sm:!mt-0 opacity-80 text-[#5A87AB] text-lg !px-9 flex flex-col gap-4 rounded-lg w-full md:w-[350px] md:flex-shrink-0"></div>
+		<div class="flex-1 max-w-[800px]">
+			<img id="project-image" src="{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_DareenTower.jpg" alt="project image" class="w-full h-auto object-cover"/>
+			<div class="flex flex-col gap-4 z-[2] !mt-10 w-full justify-end">
+				<h2 id="project-title" class="text-4xl font-thin text-[#285F99] text-left">
+					Dareen Tower
+				</h2>
+				<p id="project-summary" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B] max-w-xl">
+					Aamal Tower in West Bay provides 33 floors of flexible office and
+										              residential space, including 14 floors of office space and a
+										              100-seat auditorium. Features include health clubs, a rooftop
+										              pool, and
+				</p>
+				<a
+					data-aos="fade-up" href="#" class="group text-[#285F99] !mt-3 !px-5 !py-1.5 border border-[#9D8055] font-light
+														         transition-colors duration-500 rounded text-[17px]
+														          w-fit flex items-center gap-2 focus-visible:outline-none
+														          focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#9D8055]" aria-label="Read more about Faisal Holding">
+
+					<!-- Wrap content so both icon + text move together -->
+					<span class="flex items-center gap-2 transform-gpu transition-transform duration-500 group-hover:translate-x-4">
+						<img src="{{ theme_path }}/assets/static/arrow_icon.svg" alt="" class="h-5 w-5 shrink-0"/>
+						<span>Read More</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="w-full !p-10 md:!p-20 lg:!p-28 z-[5] !mb-10">
+	<div class="flex flex-col gap-4 items-center justify-center">
+		<h2  data-aos="fade-up" class="text-4xl font-thin text-[#285F99] text-center">
+			Growth & Possibilities
+		</h2>
+		<p data-aos="fade-up" class="text-base sm:text-lg leading-7 sm:leading-9 text-[#5B5B5B] max-w-3xl text-center">
+			Established in 1995, Al Jazi Real Estate is a subsidiary of Al Faisal
+						          Holding and a leading real estate developer in Qatar. Known for its
+						          high-end residential and commercial properties, the company focuses
+		</p>
+	</div>
+	<div class="flex flex-wrap gap-4 w-full justify-center !mt-20">
+		<div data-aos="fade-up" data-aos-duration="1500" class="w-32 h-36 sm:w-36 sm:h-40 lg:w-36 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#F1DDC4] flex flex-col items-center rounded-2xl">
+			<h1 class="text-3xl  text-left w-full font-thin">
+				<span class="countup" data-target="12" data-duration="3000" data-step="2">0</span>
+			</h1>
+			<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
+				Soft of
+			</p>
+			<p class="text-lg sm:text-xl w-full text-left">Development</p>
+		</div>
+		<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="w-32 h-36 sm:w-36 sm:h-40 lg:w-36 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#F1DDC4] flex flex-col items-center rounded-2xl">
+			<h1 class="text-3xl  text-left w-full font-thin">
+				<span class="countup" data-target="40" data-duration="3000" data-step="2">0</span>
+			</h1>
+			<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
+				projects
+			</p>
+			<p class="text-lg sm:text-xl w-full text-left">in 10 years</p>
+		</div>
+		<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500" class="w-32 h-36 sm:w-36 sm:h-40 lg:w-36 lg:h-40 !px-3 sm:!px-4 !py-6 sm:!py-8 bg-[#F1DDC4] flex flex-col items-center rounded-2xl">
+			<h1 class="text-3xl  text-left w-full relative font-thin">
+					US
+					<span class="absolute text-xs sm:text-sm left-9 sm:left-10 font-thin">$</span>
+					<span class="countup" data-target="5" data-duration="3000" data-step="1">0</span>+
+				</h1>
+			<p class="text-xs sm:text-sm text-left w-full !mt-3 sm:!mt-4">
+				paid up
+			</p>
+			<p class="text-lg sm:text-xl w-full text-left">Capital</p>
+		</div>
+	</div>
+
+	<div class="flex items-center justify-center w-full !mt-28">
+		<div
+			class="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-12 max-w-7xl w-full justify-center items-center">
+			<!-- Hospitality -->
+			<div data-aos="fade-up" class="flex flex-col items-center w-full sm:w-1/2">
+				<img src="{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_Hospitality_Thumb.jpg" alt="Hospitality" class="w-full h-[250px] md:h-[350px] object-cover"/>
+				<p class="text-center !mt-4 text-[#285F99] text-xl md:text-2xl">
+					Explore Hospitality
+				</p>
+			</div>
+
+			<!-- Construction -->
+			<div data-aos="fade-up" class="flex flex-col items-center w-full sm:w-1/2">
+				<img src="{{ theme_path }}/assets/static/realestate/AlFaisal_Real_Estate_Trading_Thumb.jpg" alt="Construction" class="w-full h-[250px] md:h-[350px] object-cover"/>
+				<p class="text-center !mt-4 text-[#285F99] text-xl md:text-2xl">
+					Explore Trading
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+{# --- TIMELINE CONTENT END --- #}

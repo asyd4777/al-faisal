@@ -157,6 +157,12 @@
       "arrow_white.svg"
     ]
   },
+  "src/realestate.js": {
+    "file": "realestate.js",
+    "name": "realestate",
+    "src": "src/realestate.js",
+    "isEntry": true
+  },
   "src/timeline.js": {
     "file": "timeline.js",
     "name": "timeline",

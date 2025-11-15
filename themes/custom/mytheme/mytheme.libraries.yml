@@ -4,6 +4,7 @@ global:
       assets/build/styles.css: {}  # vite's CSS bundle name from rollup input key "styles"
   js:
     assets/build/main.js: { attributes: { type: module, defer: true } }
+    assets/build/realestate.js: { attributes: { type: module, defer: true } }
 
 timeline:
   js:
